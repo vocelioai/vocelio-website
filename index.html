@@ -379,6 +379,291 @@
             font-size: 14px;
             margin-bottom: 8px;
         }
+        /* Live AI Call Stream */
+        .live-call-stream {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .call-visualization {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+        }
+        
+        .world-map {
+            height: 200px;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .world-map::before {
+            content: '🌍';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 60px;
+            opacity: 0.3;
+        }
+        
+        .call-pulse {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse-call 2s infinite;
+        }
+        
+        .call-pulse::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse-ring 2s infinite;
+        }
+        
+        .call-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .stat-label {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        .stat-value {
+            color: #3b82f6;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .live-conversations {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        
+        .conversations-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #3b82f6;
+        }
+        
+        .conversation-feed {
+            height: 280px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #3b82f6 transparent;
+        }
+        
+        .conversation-feed::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .conversation-feed::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .conversation-feed::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 3px;
+        }
+        
+        .conversation-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 10px;
+            border-left: 3px solid #10b981;
+            animation: fadeInUp 0.5s ease;
+        }
+        
+        .conversation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .conversation-location {
+            font-size: 12px;
+            color: #8b5cf6;
+            font-weight: bold;
+        }
+        
+        .conversation-time {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+        
+        .conversation-text {
+            font-size: 13px;
+            color: #e2e8f0;
+            line-height: 1.4;
+        }
+        
+        .conversation-ai {
+            color: #10b981;
+            font-weight: 500;
+        }
+        
+        .conversation-human {
+            color: #06b6d4;
+        }
+        
+        .ai-demo-controls {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .ai-demo-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ai-demo-btn.active {
+            background: linear-gradient(45deg, #dc2626, #991b1b);
+            animation: pulse-demo 1s infinite;
+        }
+        
+        .ai-demo-btn.active::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        .status-indicator {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .status-text {
+            color: #10b981;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes pulse-call {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.2); }
+        }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+        
+        @keyframes pulse-demo {
+            0%, 100% { box-shadow: 0 0 20px rgba(220, 38, 38, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(220, 38, 38, 0.7); }
+        }
+        
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .live-call-stream {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .ai-demo-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
         
         /* Pricing */
         .pricing-grid {
@@ -735,17 +1020,17 @@
                 
                 <div class="metrics-grid">
                     <div class="metric">
-                        <div class="metric-value" id="live-calls">47,283</div>
+                        <div class="metric-value" id="live-calls-main">47,283</div>
                         <div class="metric-label">Active Calls</div>
                         <div class="metric-change">+2.3K/min</div>
                     </div>
                     <div class="metric" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3);">
-                        <div class="metric-value" id="daily-revenue" style="color: #10b981;">$2.8M</div>
+                        <div class="metric-value" id="daily-revenue-main" style="color: #10b981;">$2.8M</div>
                         <div class="metric-label">Daily Revenue</div>
                         <div class="metric-change">+23% today</div>
                     </div>
                     <div class="metric" style="background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.3);">
-                        <div class="metric-value" id="success-rate" style="color: #8b5cf6;">94.7%</div>
+                        <div class="metric-value" id="success-rate-main" style="color: #8b5cf6;">94.7%</div>
                         <div class="metric-label">Success Rate</div>
                         <div class="metric-change">AI Optimized</div>
                     </div>
@@ -856,7 +1141,62 @@
             </div>
         </div>
     </section>
-
+    
+    <!-- 🔥 Live AI Demo Stream Section -->
+    <section id="live-demo-stream" class="section">
+      <div class="container">
+        <div class="header">
+            <h1 class="title">🔥 LIVE AI CALLING DEMO 🔥</h1>
+            <p class="subtitle">Watch real AI conversations happening worldwide RIGHT NOW!</p>
+        </div>
+        
+        <div class="live-call-stream">
+            <div class="call-visualization">
+                <div class="world-map">
+                    <div class="call-pulse" style="top: 30%; left: 25%;"></div>
+                    <div class="call-pulse" style="top: 45%; left: 70%;"></div>
+                    <div class="call-pulse" style="top: 20%; left: 50%;"></div>
+                    <div class="call-pulse" style="top: 60%; left: 15%;"></div>
+                    <div class="call-pulse" style="top: 35%; left: 80%;"></div>
+                </div>
+                <div class="call-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">🌍 Active Now:</span>
+                        <span class="stat-value" id="live-calls-stream">47,283</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">💰 Revenue/Min:</span>
+                        <span class="stat-value" id="revenue-per-min">$1,247</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">🎯 Success Rate:</span>
+                        <span class="stat-value" id="success-rate-stream">94.7%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="live-conversations">
+                <h4 class="conversations-title">🎙️ Live AI Conversations</h4>
+                <div class="conversation-feed" id="conversation-feed">
+                    <!-- Conversations will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="ai-demo-controls">
+            <button onclick="startAIDemo()" class="btn btn-primary ai-demo-btn" id="ai-demo-btn">
+                🤖 SIMULATE LIVE AI CALL
+            </button>
+            <button onclick="toggleCallStream()" class="btn btn-secondary" id="stream-toggle">
+                ⏸️ PAUSE STREAM
+            </button>
+        </div>
+        
+        <div class="status-indicator">
+            <div class="status-text" id="status">✅ Live AI Stream Active - New conversations every 2-5 seconds</div>
+        </div>
+    </div>
+    
     <!-- Pricing Section -->
     <section id="pricing" class="section" style="background: rgba(30, 41, 59, 0.3);">
         <div class="container">
@@ -1129,9 +1469,9 @@
     <script>
         // Fixed live metrics animation
         function updateLiveMetrics() {
-            const liveCalls = document.getElementById('live-calls');
-            const dailyRevenue = document.getElementById('daily-revenue');
-            const successRate = document.getElementById('success-rate');
+            const liveCalls = document.getElementById('live-calls-main');
+            const dailyRevenue = document.getElementById('daily-revenue-main');
+            const successRate = document.getElementById('success-rate-main');
             
             if (liveCalls) {
                 const currentCalls = parseInt(liveCalls.textContent.replace(',', ''));
@@ -1267,7 +1607,210 @@
     })
     .catch(error => console.error("Footer failed to load:", error));
 </script>
-
+        
+<script>
+// Live AI conversation data
+        const conversationTemplates = [
+            {
+                locations: ['🇺🇸 New York', '🇺🇸 California', '🇺🇸 Texas', '🇺🇸 Florida'],
+                conversations: [
+                    { ai: 'Hi! This is Sarah from Vocelio AI. How can I help you today?', human: 'I need information about your premium plan.' },
+                    { ai: 'Great! Our premium plan includes unlimited AI agents and advanced analytics. Would you like a personalized demo?', human: 'Yes, that sounds perfect!' },
+                    { ai: 'Perfect! I can schedule that for you right now. What time works best?', human: 'How about tomorrow at 2 PM?' }
+                ]
+            },
+            {
+                locations: ['🇬🇧 London', '🇬🇧 Manchester', '🇮🇪 Dublin'],
+                conversations: [
+                    { ai: 'Hello! I\'m calling from Vocelio regarding your recent inquiry.', human: 'Oh yes, I was interested in your AI calling solution.' },
+                    { ai: 'Brilliant! Our AI can handle thousands of calls simultaneously. Would you like to see how it works?', human: 'Absolutely, show me!' },
+                    { ai: 'I\'ll send you our live demo link. You\'ll be amazed by the results!', human: 'Looking forward to it!' }
+                ]
+            },
+            {
+                locations: ['🇩🇪 Berlin', '🇩🇪 Munich', '🇦🇹 Vienna'],
+                conversations: [
+                    { ai: 'Guten Tag! This is Emma from Vocelio AI. How may I assist you?', human: 'I need a scalable call center solution for my business.' },
+                    { ai: 'Perfect! Our AI scales from 1 to 1 million calls instantly. What\'s your current volume?', human: 'About 10,000 calls per month.' },
+                    { ai: 'Excellent! We can 10x that easily. Let me show you our success stories.', human: 'That would be wonderful!' }
+                ]
+            },
+            {
+                locations: ['🇫🇷 Paris', '🇫🇷 Lyon', '🇧🇪 Brussels'],
+                conversations: [
+                    { ai: 'Bonjour! Je suis Sophie de Vocelio AI. Comment puis-je vous aider?', human: 'I\'m looking for an AI solution for customer service.' },
+                    { ai: 'Magnifique! Our AI speaks 13+ languages fluently. Shall I demonstrate?', human: 'Yes please, that\'s exactly what I need!' },
+                    { ai: 'Wonderful! I\'ll switch to French mode... Très bien! Ready for your demo?', human: 'Impressive! Let\'s do this!' }
+                ]
+            },
+            {
+                locations: ['🇯🇵 Tokyo', '🇯🇵 Osaka', '🇰🇷 Seoul'],
+                conversations: [
+                    { ai: 'こんにちは! This is Yuki from Vocelio AI. How can I help?', human: 'I need AI that works in Asian markets.' },
+                    { ai: 'Perfect! Our AI is optimized for Asian business culture. Would you like a demo?', human: 'Yes, especially for Japanese customers.' },
+                    { ai: 'すばらしい! I\'ll show you our Japanese-optimized AI agent right now!', human: 'That\'s exactly what I was hoping for!' }
+                ]
+            },
+            {
+                locations: ['🇮🇳 Mumbai', '🇮🇳 Bangalore', '🇮🇳 Delhi'],
+                conversations: [
+                    { ai: 'Namaste! This is Priya from Vocelio AI. How may I assist you today?', human: 'I want to scale my business with AI calling.' },
+                    { ai: 'Excellent choice! Our AI helped Indian companies generate ₹100+ crores. Interested?', human: 'That\'s incredible! Tell me more!' },
+                    { ai: 'I\'ll share case studies of companies like yours. Ready to 10x your revenue?', human: 'Absolutely! Let\'s get started!' }
+                ]
+            }
+        ];
+        
+        let streamActive = true;
+        let demoActive = false;
+        let conversationCount = 0;
+        
+        function addConversation() {
+            if (!streamActive) return;
+            
+            const template = conversationTemplates[Math.floor(Math.random() * conversationTemplates.length)];
+            const location = template.locations[Math.floor(Math.random() * template.locations.length)];
+            const conversation = template.conversations[Math.floor(Math.random() * template.conversations.length)];
+            
+            const isAI = Math.random() > 0.5;
+            const message = isAI ? conversation.ai : conversation.human;
+            const speaker = isAI ? 'AI Agent' : 'Customer';
+            const speakerClass = isAI ? 'conversation-ai' : 'conversation-human';
+            
+            const now = new Date();
+            const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            
+            const conversationHTML = `
+                <div class="conversation-item">
+                    <div class="conversation-header">
+                        <span class="conversation-location">${location}</span>
+                        <span class="conversation-time">${timeString}</span>
+                    </div>
+                    <div class="conversation-text">
+                        <span class="${speakerClass}">${speaker}:</span> ${message}
+                    </div>
+                </div>
+            `;
+            
+            const feed = document.getElementById('conversation-feed');
+            if (feed) {
+                feed.insertAdjacentHTML('afterbegin', conversationHTML);
+                
+                // Keep only last 10 conversations
+                const items = feed.querySelectorAll('.conversation-item');
+                if (items.length > 10) {
+                    items[items.length - 1].remove();
+                }
+                
+                conversationCount++;
+                updateStatus();
+            }
+        }
+        
+        function startAIDemo() {
+            const button = document.getElementById('ai-demo-btn');
+            
+            if (!demoActive) {
+                demoActive = true;
+                button.textContent = '🔴 LIVE AI DEMO ACTIVE';
+                button.classList.add('active');
+                
+                // Add demo conversations more frequently
+                const demoInterval = setInterval(() => {
+                    if (!demoActive) {
+                        clearInterval(demoInterval);
+                        return;
+                    }
+                    addConversation();
+                }, 1500);
+                
+                // Stop demo after 30 seconds
+                setTimeout(() => {
+                    if (demoActive) {
+                        demoActive = false;
+                        button.textContent = '🤖 SIMULATE LIVE AI CALL';
+                        button.classList.remove('active');
+                        updateStatus();
+                    }
+                }, 30000);
+            } else {
+                demoActive = false;
+                button.textContent = '🤖 SIMULATE LIVE AI CALL';
+                button.classList.remove('active');
+                updateStatus();
+            }
+        }
+        
+        function toggleCallStream() {
+            const button = document.getElementById('stream-toggle');
+            streamActive = !streamActive;
+            
+            if (streamActive) {
+                button.textContent = '⏸️ PAUSE STREAM';
+            } else {
+                button.textContent = '▶️ RESUME STREAM';
+            }
+            updateStatus();
+        }
+        
+        function updateStatus() {
+            const status = document.getElementById('status');
+            if (!streamActive) {
+                status.textContent = '⏸️ Stream Paused - Click Resume to continue';
+                status.style.color = '#f97316';
+            } else if (demoActive) {
+                status.textContent = '🔴 LIVE AI DEMO ACTIVE - Accelerated conversation stream!';
+                status.style.color = '#dc2626';
+            } else {
+                status.textContent = `✅ Live AI Stream Active - ${conversationCount} conversations captured`;
+                status.style.color = '#10b981';
+            }
+        }
+        
+        function updateDemoMetrics() {
+            const liveCalls = document.getElementById('live-calls-stream');
+            const revenuePerMin = document.getElementById('revenue-per-min');
+            const successRate = document.getElementById('success-rate-stream');
+            
+            if (liveCalls) {
+                const currentCalls = parseInt(liveCalls.textContent.replace(',', ''));
+                const newCalls = currentCalls + Math.floor(Math.random() * 100) - 50;
+                liveCalls.textContent = Math.max(1000, newCalls).toLocaleString();
+            }
+            
+            if (revenuePerMin) {
+                const currentRevenue = parseInt(revenuePerMin.textContent.replace('$', '').replace(',', ''));
+                const newRevenue = currentRevenue + Math.floor(Math.random() * 100) - 50;
+                revenuePerMin.textContent = '$' + Math.max(1000, newRevenue).toLocaleString();
+            }
+            
+            if (successRate) {
+                const currentRate = parseFloat(successRate.textContent.replace('%', ''));
+                const newRate = Math.max(85, Math.min(99, currentRate + (Math.random() - 0.5) * 0.2));
+                successRate.textContent = newRate.toFixed(1) + '%';
+            }
+        }
+        
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Start with a few conversations immediately
+            addConversation();
+            setTimeout(() => addConversation(), 1000);
+            setTimeout(() => addConversation(), 2000);
+            
+            // Start live conversation stream
+            setInterval(() => {
+                addConversation();
+            }, Math.random() * 3000 + 2000);
+            
+            // Update metrics every 3 seconds
+            setInterval(updateDemoMetrics, 3000);
+            
+            updateStatus();
+        });
+</script>
+        
+        
 <!-- Footer Section -->
 <div id="footer"></div>
 
