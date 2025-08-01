@@ -1103,9 +1103,9 @@
             
             if (dailyRevenue) {
                 // Fixed: Corrected the string replacement
-                const currentRevenue = parseFloat(dailyRevenue.textContent.replace(', '').replace('M', ''));
+                const currentRevenue = parseFloat(dailyRevenue.textContent.replace('$', '').replace('M', ''));
                 const newRevenue = currentRevenue + (Math.random() * 0.01);
-                dailyRevenue.textContent = ' + newRevenue.toFixed(1) + 'M';
+                dailyRevenue.textContent = '$' + newRevenue.toFixed(1) + 'M';
             }
             
             if (successRate) {
