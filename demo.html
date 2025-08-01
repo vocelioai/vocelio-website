@@ -1365,24 +1365,34 @@
 
 <!-- JS for animations & footer -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Observe demo elements for animation
-        document.querySelectorAll('.instruction-card, .conversation-card, .analytics-card, .demo-feature')
-            .forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(element);
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate elements on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.2 });
 
-        // Load footer dynamically
-        fetch("components/footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer").innerHTML = data;
-            })
-            .catch(error => console.error("Footer failed to load:", error));
-    });
+    document.querySelectorAll('.instruction-card, .conversation-card, .analytics-card, .feature-card')
+        .forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(element);
+        });
+
+    // Load footer dynamically (safe)
+    fetch("components/footer.html")
+        .then(response => response.text())
+        .then(data => {
+            const footer = document.getElementById("footer");
+            if (footer) footer.innerHTML = data;
+        })
+        .catch(error => console.error("Footer failed to load:", error));
+});
 </script>
 
 <!-- Footer Section -->
