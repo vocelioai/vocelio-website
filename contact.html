@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Vocelio.ai - Get in Touch with Our Team</title>
+    <meta name="description" content="Contact Vocelio.ai for support, sales, partnerships, or demos. Available 24/7 with instant response. Call, email, or chat with our team today.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 28px;
+            animation: pulse 2s infinite;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: -5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        /* Contact Methods */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .contact-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #3b82f6;
+        }
+        
+        .contact-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .contact-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .contact-description {
+            color: #94a3b8;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .contact-action {
+            font-size: 18px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+        
+        .contact-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin: 80px 0;
+        }
+        
+        /* Contact Form */
+        .contact-form-section {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+            padding: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .form-subtitle {
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.5);
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .form-select {
+            width: 100%;
+            padding: 15px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.5);
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        /* Contact Info */
+        .contact-info-section {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 20px;
+            padding: 60px;
+        }
+        
+        .info-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .info-subtitle {
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .info-item:hover {
+            border-color: #3b82f6;
+            transform: translateX(5px);
+        }
+        
+        .info-icon {
+            font-size: 24px;
+            margin-top: 5px;
+        }
+        
+        .info-content h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .info-content p {
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+        
+        .info-content .highlight {
+            color: #3b82f6;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 80px 0;
+        }
+        
+        .faq-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .faq-subtitle {
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 20px;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .faq-item {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-question {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #e2e8f0;
+        }
+        
+        .faq-answer {
+            color: #94a3b8;
+            line-height: 1.7;
+        }
+        
+        /* Office Locations */
+        .offices-section {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 80px 0;
+        }
+        
+        .offices-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .offices-subtitle {
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 20px;
+        }
+        
+        .offices-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .office-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .office-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .office-flag {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .office-city {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .office-address {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+        
+        .office-details {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2));
+            border-radius: 20px;
+            padding: 80px 60px;
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .cta-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 50px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .cta-buttons .btn {
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+        
+        .cta-note {
+            color: #94a3b8;
+            font-size: 16px;
+        }
+        
+        /* Animations */
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .contact-methods {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .offices-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-form-section,
+            .contact-info-section,
+            .faq-section,
+            .offices-section,
+            .cta-section {
+                padding: 40px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">🔥</div>
+                    <div>
+                        <div class="logo-text">Vocelio.ai</div>
+                        <div class="logo-subtitle">World's Best AI Call Center</div>
+                    </div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/features">Features</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/demo">Live Demo</a></li>
+                    <li><a href="/contact" class="active">Contact</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-secondary">Sign In</button>
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>→</span>
+                <span>Contact</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">GET IN TOUCH</span><br>
+                We're Here to Help 24/7
+            </h1>
+            
+            <p class="hero-subtitle">
+                Need support, have questions, or want a custom demo? Our team is ready to help you 
+                transform your business with AI call center technology.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="container">
+        <div class="contact-methods">
+            <div class="contact-card" onclick="callPhone()">
+                <div class="contact-icon">📞</div>
+                <h3 class="contact-title">Call Us</h3>
+                <p class="contact-description">Speak with our team instantly</p>
+                <div class="contact-action">+1-555-VOCELIO</div>
+                <div class="contact-status">
+                    <div class="status-dot"></div>
+                    <span>Available 24/7</span>
+                </div>
+            </div>
+            
+            <div class="contact-card" onclick="startChat()">
+                <div class="contact-icon">💬</div>
+                <h3 class="contact-title">Live Chat</h3>
+                <p class="contact-description">Get instant answers from our AI</p>
+                <div class="contact-action">Start Chat Now</div>
+                <div class="contact-status">
+                    <div class="status-dot"></div>
+                    <span>Online Now</span>
+                </div>
+            </div>
+            
+            <div class="contact-card" onclick="sendEmail()">
+                <div class="contact-icon">📧</div>
+                <h3 class="contact-title">Email Support</h3>
+                <p class="contact-description">Detailed support via email</p>
+                <div class="contact-action">support@vocelio.ai</div>
+                <div class="contact-status">
+                    <div class="status-dot"></div>
+                    <span>< 1 hour response</span>
+                </div>
+            </div>
+            
+            <div class="contact-card" onclick="scheduleDemo()">
+                <div class="contact-icon">📅</div>
+                <h3 class="contact-title">Schedule Demo</h3>
+                <p class="contact-description">Personalized product demo</p>
+                <div class="contact-action">Book Meeting</div>
+                <div class="contact-status">
+                    <div class="status-dot"></div>
+                    <span>Same day available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="container">
+        <div class="main-content">
+            <!-- Contact Form -->
+            <div class="contact-form-section fade-in">
+                <h2 class="form-title">
+                    <span class="gradient-text">Send Us a Message</span>
+                </h2>
+                <p class="form-subtitle">
+                    Fill out the form below and we'll get back to you within 1 hour during business hours
+                </p>
+                
+                <form onsubmit="handleContactForm(event)">
+                    <div class="form-group">
+                        <label class="form-label">Full Name *</label>
+                        <input type="text" required name="name" class="form-input" placeholder="Your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email Address *</label>
+                        <input type="email" required name="email" class="form-input" placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" name="company" class="form-input" placeholder="Your company">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Inquiry Type *</label>
+                        <select required name="type" class="form-input form-select">
+                            <option value="">Select inquiry type</option>
+                            <option value="sales">Sales & Pricing</option>
+                            <option value="support">Technical Support</option>
+                            <option value="demo">Request Demo</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="enterprise">Enterprise Solutions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Message *</label>
+                        <textarea required name="message" class="form-input form-textarea" 
+                                placeholder="Tell us about your needs, questions, or how we can help..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary form-submit">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="contact-info-section fade-in">
+                <h2 class="info-title">
+                    <span class="gradient-text">Contact Information</span>
+                </h2>
+                <p class="info-subtitle">
+                    Multiple ways to reach our team for immediate assistance
+                </p>
+                
+                <div class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-content">
+                        <h3>Phone Support</h3>
+                        <p>Call us anytime for immediate assistance</p>
+                        <div class="highlight">+1-555-VOCELIO (862-3546)</div>
+                        <p style="color: #10b981; font-size: 14px; margin-top: 5px;">✅ Available 24/7 worldwide</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-content">
+                        <h3>Email Departments</h3>
+                        <p>Direct email to the right team</p>
+                        <div class="highlight">
+                            Sales: sales@vocelio.ai<br>
+                            Support: support@vocelio.ai<br>
+                            Enterprise: enterprise@vocelio.ai
+                        </div>
+                        <p style="color: #10b981; font-size: 14px; margin-top: 5px;">✅ < 1 hour response time</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">💬</div>
+                    <div class="info-content">
+                        <h3>Live Chat & Social</h3>
+                        <p>Connect with us on your preferred platform</p>
+                        <div class="highlight">
+                            Chat: Available on website<br>
+                            LinkedIn: /company/vocelio-ai<br>
+                            Twitter: @VocelioAI
+                        </div>
+                        <p style="color: #10b981; font-size: 14px; margin-top: 5px;">✅ Instant responses</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">🕐</div>
+                    <div class="info-content">
+                        <h3>Response Times</h3>
+                        <p>When you can expect to hear from us</p>
+                        <div class="highlight">
+                            Phone: Immediate<br>
+                            Chat: < 2 minutes<br>
+                            Email: < 1 hour<br>
+                            Enterprise: < 30 minutes
+                        </div>
+                        <p style="color: #10b981; font-size: 14px; margin-top: 5px;">✅ Guaranteed SLA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">
+                <span class="gradient-text">Quick Answers</span>
+            </h2>
+            <p class="faq-subtitle">
+                Common questions answered instantly
+            </p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">🚀 How quickly can I get started?</h3>
+                    <p class="faq-answer">
+                        You can start making AI calls in under 5 minutes! Sign up for free, 
+                        customize your agent, and begin your 100 free trial calls immediately.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">💰 What does it cost to get started?</h3>
+                    <p class="faq-answer">
+                        Absolutely nothing! You get 100 free AI calls to test everything. 
+                        After that, pay only $0.20 per successful call with no monthly fees.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">🛠️ Do you offer technical support?</h3>
+                    <p class="faq-answer">
+                        Yes! We provide 24/7 technical support via phone, chat, and email. 
+                        Enterprise customers get dedicated account managers and priority support.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">🔧 Can you integrate with our existing systems?</h3>
+                    <p class="faq-answer">
+                        Yes! We have native integrations with 50+ CRMs and business tools including 
+                        Salesforce, HubSpot, Pipedrive, plus custom API access for any system.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">📞 Can I try the AI before signing up?</h3>
+                    <p class="faq-answer">
+                        Absolutely! Call +1-555-VOCELIO right now to speak with our live AI demo agent "Sarah". 
+                        Experience the technology firsthand before making any commitment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="offices-section">
+        <div class="container">
+            <h2 class="offices-title">
+                <span class="gradient-text">Global Presence</span>
+            </h2>
+            <p class="offices-subtitle">
+                Our team is distributed worldwide to serve you better
+            </p>
+            
+            <div class="offices-grid">
+                <div class="office-card">
+                    <div class="office-flag">🇺🇸</div>
+                    <h3 class="office-city">San Francisco, USA</h3>
+                    <p class="office-address">
+                        123 Innovation Drive<br>
+                        San Francisco, CA 94105
+                    </p>
+                    <div class="office-details">
+                        Headquarters & R&D<br>
+                        Pacific Time Zone
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-flag">🇬🇧</div>
+                    <h3 class="office-city">London, UK</h3>
+                    <p class="office-address">
+                        456 Tech Square<br>
+                        London, UK EC2M 4RH
+                    </p>
+                    <div class="office-details">
+                        European Operations<br>
+                        GMT Time Zone
+                    </div>
+                </div>
+                
+                <div class="office-card">
+                    <div class="office-flag">🇸🇬</div>
+                    <h3 class="office-city">Singapore</h3>
+                    <p class="office-address">
+                        789 Business Hub<br>
+                        Singapore 018989
+                    </p>
+                    <div class="office-details">
+                        Asia-Pacific Hub<br>
+                        SGT Time Zone
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">
+                <span class="gradient-text">Ready to Get Started?</span>
+            </h2>
+            <p class="cta-subtitle">
+                Don't wait - start transforming your business with AI call center technology today
+            </p>
+            
+            <div class="cta-buttons">
+                <button onclick="callPhone()" class="btn btn-primary">
+                    📞 Call Now: +1-555-VOCELIO
+                </button>
+                <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-secondary">
+                    🚀 Start Free Trial - 100 Calls Free
+                </button>
+            </div>
+            
+            <p class="cta-note">
+                ✅ No Credit Card Required • ✅ 5 Minute Setup • ✅ 24/7 Support Available
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Contact form handler
+        function handleContactForm(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Show loading state
+            const button = event.target.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = 'Sending Message...';
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(function() {
+                alert('✅ Message sent successfully!\n\nThank you for contacting Vocelio.ai. Our team will respond within 1 hour during business hours.\n\nFor immediate assistance, call +1-555-VOCELIO or start a live chat on our website.');
+                
+                // Reset form
+                event.target.reset();
+                button.textContent = originalText;
+                button.disabled = false;
+            }, 2000);
+        }
+        
+        // Contact method functions
+        function callPhone() {
+            if (navigator.userAgent.match(/Mobi/)) {
+                // Mobile device - attempt to make actual call
+                window.open('tel:+15558623546', '_self');
+            } else {
+                // Desktop - show instructions
+                alert('📞 Call +1-555-VOCELIO (862-3546) from your phone\n\n✨ Available 24/7 worldwide\n🤖 Speak with our team or AI assistant\n🔥 Immediate assistance available\n\n💡 For mobile users, this will dial automatically!');
+            }
+        }
+        
+        function startChat() {
+            alert('💬 Live Chat Available!\n\nOur AI-powered chat system is available 24/7 on our website. You can also:\n\n🤖 Ask questions about features and pricing\n📞 Schedule a callback\n🎯 Get personalized recommendations\n📧 Connect with human agents\n\nClick "Start Free Trial" to access live chat!');
+            window.open('https://app.vocelio.ai', '_blank');
+        }
+        
+        function sendEmail() {
+            const subject = encodeURIComponent('Vocelio.ai Inquiry');
+            const body = encodeURIComponent('Hi Vocelio.ai team,\n\nI\'m interested in learning more about your AI call center platform.\n\nPlease contact me with:\n[ ] Pricing information\n[ ] Technical details\n[ ] Custom demo\n[ ] Enterprise solutions\n\nBest regards,\n');
+            
+            window.open(`mailto:support@vocelio.ai?subject=${subject}&body=${body}`, '_self');
+        }
+        
+        function scheduleDemo() {
+            alert('📅 Schedule Your Personal Demo!\n\nGet a customized demonstration of Vocelio.ai:\n\n🎯 Tailored to your industry\n💰 Custom ROI calculations\n🔧 Integration planning\n📊 Live performance metrics\n\nCall +1-555-VOCELIO or start your free trial to book a demo slot!');
+            window.open('https://app.vocelio.ai', '_blank');
+        }
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add scroll animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.contact-card, .info-item, .faq-item, .office-card').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(element);
+            });
+            
+            // Add hover effects for contact cards
+            document.querySelectorAll('.contact-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

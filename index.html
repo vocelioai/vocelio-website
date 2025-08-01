@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocelio.ai - World's Best AI Call Center Platform</title>
+    <meta name="description" content="Revolutionary AI call center platform with human-like voices in 13+ languages. Generate millions in revenue with our advanced AI agents.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo-icon {
+            font-size: 28px;
+            animation: pulse 2s infinite;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: -5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            color: #94a3b8;
+            border: none;
+        }
+        
+        .btn-ghost:hover {
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding-top: 80px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero-buttons .btn {
+            font-size: 18px;
+            padding: 18px 36px;
+        }
+        
+        .trust-indicators {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 60px;
+        }
+        
+        /* Live Metrics */
+        .metrics-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 60px;
+        }
+        
+        .metrics-title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .metrics-subtitle {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .metric-value {
+            font-size: 48px;
+            font-weight: bold;
+            color: #3b82f6;
+            margin-bottom: 8px;
+        }
+        
+        .metric-label {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        .metric-change {
+            font-size: 12px;
+            color: #10b981;
+            margin-top: 5px;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 80px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .pricing-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid #10b981;
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #10b981, #059669);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-price {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .pricing-period {
+            color: #94a3b8;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        /* Demo Section */
+        .demo-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .demo-icon {
+            font-size: 80px;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        
+        .demo-title {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .demo-phone {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .demo-description {
+            font-size: 20px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .demo-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .demo-feature {
+            text-align: center;
+        }
+        
+        .demo-feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .demo-feature-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .demo-feature-subtitle {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .modal-close:hover {
+            color: white;
+        }
+        
+        .modal-title {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.5);
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+        
+        .form-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .form-footer a {
+            color: #3b82f6;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* Animations */
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .features-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .trust-indicators {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .demo-phone {
+                font-size: 40px;
+            }
+            
+            .demo-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">🔥</div>
+                    <div>
+                        <div class="logo-text">Vocelio.ai</div>
+                        <div class="logo-subtitle">World's Best AI Call Center</div>
+                    </div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#demo">Live Demo</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button onclick="showAuth('signin')" class="btn btn-ghost">Sign In</button>
+                    <button onclick="showAuth('signup')" class="btn btn-primary">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <h1 class="hero-title">
+                <span class="gradient-text">10X YOUR SALES</span><br>
+                WITH AI AGENTS
+            </h1>
+            
+            <p class="hero-subtitle">
+                Revolutionary AI call center that generates <span style="color: #10b981; font-weight: bold;">millions in revenue</span> 
+                with human-like voices in <span style="color: #3b82f6; font-weight: bold;">13+ languages</span>. 
+                Scale from 1 to 1 million calls instantly.
+            </p>
+            
+            <div class="hero-buttons">
+                <button onclick="showAuth('signup')" class="btn btn-primary">
+                    🚀 START FREE TRIAL - MAKE YOUR FIRST MILLION
+                </button>
+                <button onclick="callDemo()" class="btn btn-secondary">
+                    🎙️ LIVE DEMO - CALL NOW: +1-555-VOCELIO
+                </button>
+            </div>
+            
+            <div class="trust-indicators">
+                <span>✅ 99.9% Uptime Guaranteed</span>
+                <span>✅ TCPA/GDPR Compliant</span>
+                <span>✅ Enterprise Security</span>
+                <span>✅ 24/7 Support</span>
+            </div>
+            
+            <!-- Live Metrics -->
+            <div class="metrics-card">
+                <h3 class="metrics-title">🔥 LIVE GLOBAL METRICS</h3>
+                <p class="metrics-subtitle">Real-time data from our AI call center network</p>
+                
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value" id="live-calls">47,283</div>
+                        <div class="metric-label">Active Calls</div>
+                        <div class="metric-change">+2.3K/min</div>
+                    </div>
+                    <div class="metric" style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3);">
+                        <div class="metric-value" id="daily-revenue" style="color: #10b981;">$2.8M</div>
+                        <div class="metric-label">Daily Revenue</div>
+                        <div class="metric-change">+23% today</div>
+                    </div>
+                    <div class="metric" style="background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.3);">
+                        <div class="metric-value" id="success-rate" style="color: #8b5cf6;">94.7%</div>
+                        <div class="metric-label">Success Rate</div>
+                        <div class="metric-change">AI Optimized</div>
+                    </div>
+                    <div class="metric" style="background: rgba(249, 115, 22, 0.1); border-color: rgba(249, 115, 22, 0.3);">
+                        <div class="metric-value" style="color: #f97316;">67</div>
+                        <div class="metric-label">Countries</div>
+                        <div class="metric-change">Global Coverage</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">REVOLUTIONARY FEATURES</span>
+            </h2>
+            <p class="section-subtitle">
+                Everything you need to build the world's most advanced AI call center
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">GPT-4 Powered AI Brain</h3>
+                    <p class="feature-description">
+                        Advanced AI that understands context, handles objections, and closes deals like your best human agents.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✅ Natural conversation flow</li>
+                        <li>✅ Intelligent objection handling</li>
+                        <li>✅ Real-time sentiment analysis</li>
+                        <li>✅ Outcome prediction</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3 class="feature-title">Human-Like Voices</h3>
+                    <p class="feature-description">
+                        Ultra-realistic voices powered by ElevenLabs that customers can't distinguish from humans.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✅ 150+ premium voices</li>
+                        <li>✅ 13+ languages supported</li>
+                        <li>✅ Emotion & tone control</li>
+                        <li>✅ Custom voice cloning</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📞</div>
+                    <h3 class="feature-title">Global Phone System</h3>
+                    <p class="feature-description">
+                        Powered by Twilio with global coverage, local numbers, and enterprise reliability.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✅ 200+ countries coverage</li>
+                        <li>✅ Local number provisioning</li>
+                        <li>✅ Call recording & transcripts</li>
+                        <li>✅ Live human transfer</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Real-Time Analytics</h3>
+                    <p class="feature-description">
+                        Comprehensive dashboard with live metrics, AI insights, and performance optimization.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✅ Live call monitoring</li>
+                        <li>✅ Conversion tracking</li>
+                        <li>✅ A/B testing</li>
+                        <li>✅ ROI calculations</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">CRM Integration</h3>
+                    <p class="feature-description">
+                        Seamlessly connect with Salesforce, HubSpot, Pipedrive, and 50+ other platforms.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✅ 2-way data sync</li>
+                        <li>✅ Custom field mapping</li>
+                        <li>✅ Webhook automation</li>
+                        <li>✅ Zapier integration</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Infinite Scalability</h3>
+                    <p class="feature-description">
+                        Scale from 1 to 1 million concurrent calls instantly with our cloud infrastructure.
+                    </p>
+                    <ul class="feature-list">
+                        <li>✅ Auto-scaling infrastructure</li>
+                        <li>✅ 99.99% uptime SLA</li>
+                        <li>✅ Load balancing</li>
+                        <li>✅ Global redundancy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section" style="background: rgba(30, 41, 59, 0.3);">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">SIMPLE, TRANSPARENT PRICING</span>
+            </h2>
+            <p class="section-subtitle">Start free, scale as you grow, dominate your market</p>
+            
+            <div class="pricing-grid">
+                <!-- Free Plan -->
+                <div class="pricing-card">
+                    <ul class="pricing-features">
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>100 free AI calls</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>2 AI agents</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>Basic analytics</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>Email support</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="showAuth('signup')" class="btn btn-secondary" style="width: 100%;">
+                        Start Free Trial
+                    </button>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">🔥 MOST POPULAR</div>
+                    
+                    <div class="pricing-header" style="margin-top: 20px;">
+                        <h3 class="pricing-title">Professional</h3>
+                        <div class="pricing-price">$0.20</div>
+                        <p class="pricing-period">per successful call</p>
+                        <p style="color: #10b981; font-size: 14px; margin-top: 10px;">Pay only for results!</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>Unlimited AI agents</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>Advanced analytics</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>CRM integrations</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>Custom voices</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="showAuth('signup')" class="btn btn-primary" style="width: 100%;">
+                        Start Professional
+                    </button>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-price">Custom</div>
+                        <p class="pricing-period">Volume discounts</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>Everything in Professional</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>White-label solution</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>Dedicated support</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>Custom integrations</span>
+                        </li>
+                        <li>
+                            <span style="color: #10b981;">✅</span>
+                            <span>SLA guarantees</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="contactSales()" class="btn" style="width: 100%; background: linear-gradient(45deg, #8b5cf6, #ec4899); color: white;">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo" class="section" style="background: rgba(139, 92, 246, 0.1);">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">EXPERIENCE THE MAGIC</span>
+            </h2>
+            <p class="section-subtitle">Call our live AI demo and see why customers can't tell it's not human</p>
+            
+            <div class="demo-card">
+                <div class="demo-icon">📞</div>
+                <h3 class="demo-title">Call Our Live AI Demo</h3>
+                <div class="demo-phone">+1-555-VOCELIO</div>
+                <p class="demo-description">
+                    Our AI agent "Sarah" will answer your call in seconds. Ask her anything about Vocelio.ai, 
+                    request a quote, or just have a conversation. You won't believe it's AI!
+                </p>
+                
+                <div class="demo-features">
+                    <div class="demo-feature">
+                        <div class="demo-feature-icon">🌍</div>
+                        <div class="demo-feature-title">Available 24/7</div>
+                        <div class="demo-feature-subtitle">In 13+ languages</div>
+                    </div>
+                    <div class="demo-feature">
+                        <div class="demo-feature-icon">⚡</div>
+                        <div class="demo-feature-title">Instant Response</div>
+                        <div class="demo-feature-subtitle">< 2 second pickup</div>
+                    </div>
+                    <div class="demo-feature">
+                        <div class="demo-feature-icon">🎭</div>
+                        <div class="demo-feature-title">Human-Like</div>
+                        <div class="demo-feature-subtitle">98% can't tell</div>
+                    </div>
+                </div>
+                
+                <button onclick="callDemo()" class="btn btn-primary" style="font-size: 24px; padding: 20px 50px;">
+                    📱 CALL NOW - IT'S FREE!
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: rgba(16, 185, 129, 0.1);">
+        <div class="container" style="text-align: center; max-width: 800px;">
+            <h2 style="font-size: 60px; font-weight: bold; margin-bottom: 30px;">
+                <span class="gradient-text">READY TO 10X YOUR SALES?</span>
+            </h2>
+            <p style="font-size: 24px; color: #94a3b8; margin-bottom: 50px;">
+                Join thousands of companies already making millions with Vocelio.ai
+            </p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 40px;">
+                <button onclick="showAuth('signup')" class="btn btn-primary" style="font-size: 20px; padding: 25px 50px;">
+                    🚀 START FREE TRIAL NOW
+                </button>
+                <button onclick="callDemo()" class="btn btn-secondary" style="font-size: 20px; padding: 25px 50px;">
+                    📞 CALL LIVE DEMO
+                </button>
+            </div>
+            
+            <div style="color: #94a3b8;">
+                <p>✅ No Credit Card Required • ✅ 100 Free Calls • ✅ Setup in 5 Minutes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <button onclick="hideAuth()" class="modal-close">&times;</button>
+            
+            <!-- Sign Up Form -->
+            <div id="signup-form" style="display: none;">
+                <h2 class="modal-title">
+                    <span class="gradient-text">Join Vocelio.ai</span>
+                </h2>
+                
+                <form onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" required name="name" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" required name="email" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" required name="company" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" required name="phone" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" required name="password" minlength="8" class="form-input">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;">
+                        🚀 Start Free Trial - 100 Calls Free!
+                    </button>
+                </form>
+                
+                <div class="form-footer">
+                    <p style="color: #94a3b8;">Already have an account? 
+                        <a onclick="showAuth('signin')">Sign In</a>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Sign In Form -->
+            <div id="signin-form" style="display: none;">
+                <h2 class="modal-title">
+                    <span class="gradient-text">Welcome Back</span>
+                </h2>
+                
+                <form onsubmit="handleSignin(event)">
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" required name="email" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" required name="password" class="form-input">
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <label style="display: flex; align-items: center; gap: 8px;">
+                            <input type="checkbox">
+                            <span style="font-size: 14px; color: #94a3b8;">Remember me</span>
+                        </label>
+                        <a href="#" style="font-size: 14px; color: #3b82f6;">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-secondary" style="width: 100%; margin-bottom: 20px;">
+                        Sign In to Dashboard
+                    </button>
+                </form>
+                
+                <div class="form-footer">
+                    <p style="color: #94a3b8;">Don't have an account? 
+                        <a onclick="showAuth('signup')">Start Free Trial</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fixed live metrics animation
+        function updateLiveMetrics() {
+            const liveCalls = document.getElementById('live-calls');
+            const dailyRevenue = document.getElementById('daily-revenue');
+            const successRate = document.getElementById('success-rate');
+            
+            if (liveCalls) {
+                const currentCalls = parseInt(liveCalls.textContent.replace(',', ''));
+                const newCalls = currentCalls + Math.floor(Math.random() * 100) - 50;
+                liveCalls.textContent = Math.max(1000, newCalls).toLocaleString();
+            }
+            
+            if (dailyRevenue) {
+                // Fixed: Corrected the string replacement
+                const currentRevenue = parseFloat(dailyRevenue.textContent.replace(', '').replace('M', ''));
+                const newRevenue = currentRevenue + (Math.random() * 0.01);
+                dailyRevenue.textContent = ' + newRevenue.toFixed(1) + 'M';
+            }
+            
+            if (successRate) {
+                const currentRate = parseFloat(successRate.textContent.replace('%', ''));
+                const newRate = Math.max(85, Math.min(99, currentRate + (Math.random() - 0.5) * 0.2));
+                successRate.textContent = newRate.toFixed(1) + '%';
+            }
+        }
+        
+        // Update metrics every 3 seconds
+        setInterval(updateLiveMetrics, 3000);
+        
+        // Auth modal functions
+        function showAuth(type) {
+            document.getElementById('auth-modal').classList.add('active');
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('signin-form').style.display = 'none';
+            
+            if (type === 'signup') {
+                document.getElementById('signup-form').style.display = 'block';
+            } else {
+                document.getElementById('signin-form').style.display = 'block';
+            }
+        }
+        
+        function hideAuth() {
+            document.getElementById('auth-modal').classList.remove('active');
+        }
+        
+        // Form handlers
+        function handleSignup(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Show loading state
+            const button = event.target.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = '🚀 Creating your account...';
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(function() {
+                alert('🎉 Account created successfully! Redirecting to app.vocelio.ai...');
+                window.open('https://app.vocelio.ai', '_blank');
+                hideAuth();
+                
+                // Reset button
+                button.textContent = originalText;
+                button.disabled = false;
+                event.target.reset();
+            }, 2000);
+        }
+        
+        function handleSignin(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // Show loading state
+            const button = event.target.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = 'Signing in...';
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(function() {
+                alert('✅ Welcome back! Redirecting to your dashboard...');
+                window.open('https://app.vocelio.ai', '_blank');
+                hideAuth();
+                
+                // Reset button
+                button.textContent = originalText;
+                button.disabled = false;
+                event.target.reset();
+            }, 2000);
+        }
+        
+        // Demo functions
+        function callDemo() {
+            alert('📞 Call +1-555-VOCELIO to speak with our AI demo agent "Sarah"!\n\n✨ Available 24/7 in 13+ languages\n🤖 Powered by GPT-4 and ElevenLabs\n🔥 You won\'t believe it\'s AI!');
+            // For mobile devices, uncomment the line below to actually initiate a call
+            // window.open('tel:+15558623546', '_self');
+        }
+        
+        function contactSales() {
+            showAuth('signup');
+        }
+        
+        // Smooth scrolling for navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation links smooth scrolling
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Close modal when clicking outside
+            document.getElementById('auth-modal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    hideAuth();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

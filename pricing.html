@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocelio.ai Pricing - Simple, Transparent, Results-Based</title>
+    <meta name="description" content="Vocelio.ai pricing plans: Start free with 100 calls, then pay only $0.20 per successful call. Enterprise solutions available. No hidden fees, maximum ROI.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 28px;
+            animation: pulse 2s infinite;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: -5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #3b82f6;
+            color: #3b82f6;
+        }
+        
+        .btn-outline:hover {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        /* Pricing Cards - Fixed for single row */
+        .pricing-section {
+            padding: 40px 0 80px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 80px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pricing-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid #10b981;
+            transform: scale(1.02);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.02) translateY(-10px);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #10b981, #059669);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .pricing-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .pricing-subtitle {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-price {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .pricing-currency {
+            font-size: 24px;
+            color: #94a3b8;
+        }
+        
+        .pricing-period {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        .pricing-savings {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 8px;
+            display: inline-block;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 25px 0;
+            flex-grow: 1;
+        }
+        
+        .pricing-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .pricing-features .check {
+            color: #10b981;
+            font-weight: bold;
+            margin-top: 2px;
+        }
+        
+        .pricing-cta {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-note {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 12px;
+        }
+        
+        /* Value Section - Fixed for single row */
+        .value-section {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 80px 0;
+            text-align: center;
+        }
+        
+        .value-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .value-subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            margin-bottom: 50px;
+        }
+        
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .value-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .value-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .value-card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .value-card-description {
+            color: #94a3b8;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            font-size: 14px;
+        }
+        
+        .value-stat {
+            font-size: 28px;
+            font-weight: bold;
+            color: #10b981;
+        }
+        
+        /* ROI Calculator */
+        .roi-section {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 80px 0;
+        }
+        
+        .roi-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .roi-subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .roi-calculator {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .roi-inputs {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+        }
+        
+        .roi-inputs h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.5);
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+        
+        .roi-results {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+        }
+        
+        .roi-results h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        
+        .roi-result-card {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2));
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .roi-result-label {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 5px;
+        }
+        
+        .roi-result-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #10b981;
+        }
+        
+        .roi-result-description {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+        
+        /* FAQ Section - Fixed for single row */
+        .faq-section {
+            margin: 80px 0;
+        }
+        
+        .faq-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .faq-item {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #e2e8f0;
+        }
+        
+        .faq-answer {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 14px;
+            flex-grow: 1;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2));
+            border-radius: 20px;
+            padding: 80px 60px;
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .cta-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 50px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .cta-buttons .btn {
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+        
+        .cta-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            color: #94a3b8;
+            font-size: 16px;
+        }
+        
+        /* Animations */
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* Responsive - Mobile adjustments */
+        @media (max-width: 1024px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+            
+            .value-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .roi-calculator {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-features {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .value-section,
+            .roi-section,
+            .cta-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">🔥</div>
+                    <div>
+                        <div class="logo-text">Vocelio.ai</div>
+                        <div class="logo-subtitle">World's Best AI Call Center</div>
+                    </div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/features">Features</a></li>
+                    <li><a href="/pricing" class="active">Pricing</a></li>
+                    <li><a href="/#demo">Live Demo</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-secondary">Sign In</button>
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>→</span>
+                <span>Pricing</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">SIMPLE, TRANSPARENT PRICING</span><br>
+                That Scales With Your Success
+            </h1>
+            
+            <p class="hero-subtitle">
+                Start free, pay only for results, and scale to millions. 
+                No hidden fees, no surprises, just maximum ROI for your business.
+            </p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Free Trial -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Free Trial</h3>
+                        <p class="pricing-subtitle">Perfect for testing our platform</p>
+                        <div class="pricing-price">
+                            <span class="pricing-currency">$</span>
+                            <span>0</span>
+                        </div>
+                        <p class="pricing-period">First 100 calls absolutely free</p>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>100 free AI calls</strong> to test everything</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>2 AI agents</strong> with customization</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>All voice options</strong> (150+ voices)</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Basic analytics</strong> & reporting</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Email support</strong> within 24 hours</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Global phone numbers</strong> available</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>No credit card</strong> required</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-outline pricing-cta">
+                        Start Free Trial
+                    </button>
+                    
+                    <p class="pricing-note">Setup in 5 minutes • No commitment</p>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">🔥 MOST POPULAR</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Professional</h3>
+                        <p class="pricing-subtitle">Pay only for successful calls</p>
+                        <div class="pricing-price">
+                            <span class="pricing-currency">$</span>
+                            <span>0.20</span>
+                        </div>
+                        <p class="pricing-period">per successful call</p>
+                        <div class="pricing-savings">🎯 Pay only for results!</div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Unlimited AI agents</strong> & customization</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Advanced analytics</strong> & AI insights</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>All CRM integrations</strong> (50+ platforms)</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Custom voice cloning</strong> available</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Priority support</strong> (1-hour response)</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Webhook automation</strong> & API access</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>A/B testing</strong> & optimization</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Live human transfer</strong> capability</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary pricing-cta">
+                        Start Professional Plan
+                    </button>
+                    
+                    <p class="pricing-note">No monthly fees • Scale infinitely</p>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <p class="pricing-subtitle">Custom solutions for large teams</p>
+                        <div class="pricing-price">
+                            <span>Custom</span>
+                        </div>
+                        <p class="pricing-period">Volume discounts available</p>
+                        <div class="pricing-savings">💼 White-label available</div>
+                    </div>
+                    
+                    <ul class="pricing-features">
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Everything in Professional</strong> plan</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Volume pricing</strong> (from $0.10/call)</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>White-label solution</strong> with your branding</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Dedicated account manager</strong></span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Custom integrations</strong> & development</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>99.99% SLA guarantee</strong> with penalties</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Advanced security</strong> & compliance</span>
+                        </li>
+                        <li>
+                            <span class="check">✅</span>
+                            <span><strong>Multi-region deployment</strong> options</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="contactSales()" class="btn btn-secondary pricing-cta">
+                        Contact Sales Team
+                    </button>
+                    
+                    <p class="pricing-note">Custom contracts • Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-section">
+        <div class="container">
+            <h2 class="value-title">
+                <span class="gradient-text">Why Vocelio.ai Delivers Incredible ROI</span>
+            </h2>
+            <p class="value-subtitle">
+                See how our customers are saving millions while 10X-ing their sales performance
+            </p>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon">💰</div>
+                    <h3 class="value-card-title">Massive Cost Savings</h3>
+                    <p class="value-card-description">
+                        Replace expensive human agents costing $15-25 per call with AI agents at just $0.20 per successful call.
+                    </p>
+                    <div class="value-stat">98% Cost Reduction</div>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">📈</div>
+                    <h3 class="value-card-title">5X More Calls</h3>
+                    <p class="value-card-description">
+                        AI agents work 24/7/365 without breaks, sick days, or holidays. Scale instantly to handle millions of calls.
+                    </p>
+                    <div class="value-stat">500% More Capacity</div>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3 class="value-card-title">Higher Conversion Rates</h3>
+                    <p class="value-card-description">
+                        AI agents are always at peak performance, never have bad days, and continuously optimize for better results.
+                    </p>
+                    <div class="value-stat">35% Better Conversion</div>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3 class="value-card-title">Instant Deployment</h3>
+                    <p class="value-card-description">
+                        Setup takes 5 minutes vs 2-6 weeks to hire and train human agents. Start generating revenue immediately.
+                    </p>
+                    <div class="value-stat">1000X Faster Setup</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-section">
+        <div class="container">
+            <h2 class="roi-title">
+                <span class="gradient-text">Calculate Your ROI</span>
+            </h2>
+            <p class="roi-subtitle">
+                See exactly how much money you'll save and earn with Vocelio.ai
+            </p>
+            
+            <div class="roi-calculator">
+                <div class="roi-inputs">
+                    <h3>📊 Your Current Setup</h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Number of Current Agents</label>
+                        <input type="number" id="current-agents" value="5" min="1" max="1000" class="form-input" onchange="calculateROI()">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Average Agent Salary (Monthly)</label>
+                        <input type="number" id="agent-salary" value="4000" min="1000" max="20000" class="form-input" onchange="calculateROI()">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Calls Per Day</label>
+                        <input type="number" id="calls-per-day" value="200" min="10" max="10000" class="form-input" onchange="calculateROI()">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Current Conversion Rate (%)</label>
+                        <input type="number" id="conversion-rate" value="15" min="1" max="100" step="0.1" class="form-input" onchange="calculateROI()">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Average Deal Value ($)</label>
+                        <input type="number" id="deal-value" value="500" min="10" max="100000" class="form-input" onchange="calculateROI()">
+                    </div>
+                </div>
+                
+                <div class="roi-results">
+                    <h3>🚀 Your Vocelio.ai Results</h3>
+                    
+                    <div class="roi-result-card">
+                        <div class="roi-result-label">Annual Cost Savings</div>
+                        <div class="roi-result-value" id="annual-savings">$180,000</div>
+                        <div class="roi-result-description">vs hiring more human agents</div>
+                    </div>
+                    
+                    <div class="roi-result-card">
+                        <div class="roi-result-label">Additional Annual Revenue</div>
+                        <div class="roi-result-value" id="additional-revenue">$2,350,000</div>
+                        <div class="roi-result-description">from 5x capacity + 35% better conversion</div>
+                    </div>
+                    
+                    <div class="roi-result-card">
+                        <div class="roi-result-label">Total Annual Benefit</div>
+                        <div class="roi-result-value" id="total-benefit">$2,530,000</div>
+                        <div class="roi-result-description">savings + additional revenue</div>
+                    </div>
+                    
+                    <div class="roi-result-card">
+                        <div class="roi-result-label">ROI</div>
+                        <div class="roi-result-value" id="roi-percentage">1,247%</div>
+                        <div class="roi-result-description">return on investment in first year</div>
+                    </div>
+                    
+                    <div class="roi-result-card">
+                        <div class="roi-result-label">Payback Period</div>
+                        <div class="roi-result-value" id="payback-period">0.9 months</div>
+                        <div class="roi-result-description">time to break even</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">
+                <span class="gradient-text">Frequently Asked Questions</span>
+            </h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">💳 How does the "pay per successful call" model work?</h3>
+                    <p class="faq-answer">
+                        You only pay $0.20 when a call achieves a positive outcome (appointment booked, sale made, 
+                        lead qualified, etc.). Failed calls, hang-ups, and voicemails are completely free. 
+                        This aligns our success with yours - we only make money when you do.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">🆓 Is the free trial really free?</h3>
+                    <p class="faq-answer">
+                        Yes! You get 100 completely free AI calls with full access to all features. 
+                        No credit card required, no hidden fees, no time limits. Test everything risk-free 
+                        and see the results for yourself before committing to anything.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">📈 What counts as a "successful call"?</h3>
+                    <p class="faq-answer">
+                        A successful call is one where the prospect takes a desired action: books an appointment, 
+                        requests more information, agrees to a follow-up, makes a purchase, or any other positive 
+                        outcome you define. You have full control over what constitutes success for your business.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">🔄 Can I cancel or change plans anytime?</h3>
+                    <p class="faq-answer">
+                        Absolutely! There are no long-term contracts or cancellation fees. 
+                        You can upgrade, downgrade, or cancel at any time. With pay-per-call pricing, 
+                        you're never locked into expensive monthly commitments.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">🌍 Do you support international calling?</h3>
+                    <p class="faq-answer">
+                        Yes! We support calling to 200+ countries with local number provisioning in most regions. 
+                        Our AI agents speak 13+ languages fluently, and we handle all international compliance 
+                        requirements including TCPA, GDPR, and local regulations.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">🛡️ Is my data secure and compliant?</h3>
+                    <p class="faq-answer">
+                        Security is our top priority. We're SOC 2 Type II certified, TCPA/GDPR compliant, 
+                        and use bank-level encryption. All data is encrypted in transit and at rest, 
+                        with comprehensive audit trails and role-based access controls.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">⚡ How quickly can I get started?</h3>
+                    <p class="faq-answer">
+                        Setup takes just 5 minutes! Create your account, customize your AI agent's script and voice, 
+                        upload your contacts, and start making calls immediately. No technical knowledge required - 
+                        our intuitive interface makes it easy for anyone to get started.
+                    </p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3 class="faq-question">📞 What if I need to transfer calls to humans?</h3>
+                    <p class="faq-answer">
+                        No problem! Our AI agents can seamlessly transfer calls to your human team members 
+                        with full conversation context preserved. You can set custom transfer triggers 
+                        and maintain a hybrid approach that leverages both AI efficiency and human expertise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">
+                <span class="gradient-text">Ready to 10X Your Sales?</span>
+            </h2>
+            <p class="cta-subtitle">
+                Join thousands of companies already making millions with Vocelio.ai's revolutionary AI call center
+            </p>
+            
+            <div class="cta-buttons">
+                <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">
+                    🚀 Start Free Trial - 100 Calls Free
+                </button>
+                <button onclick="callDemo()" class="btn btn-secondary">
+                    📞 Call Live Demo: +1-555-VOCELIO
+                </button>
+            </div>
+            
+            <div class="cta-features">
+                <span>✅ No Credit Card Required</span>
+                <span>✅ 5 Minute Setup</span>
+                <span>✅ 24/7 Support</span>
+                <span>✅ Cancel Anytime</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Fixed ROI Calculator
+        function calculateROI() {
+            const currentAgents = parseInt(document.getElementById('current-agents').value) || 5;
+            const agentSalary = parseInt(document.getElementById('agent-salary').value) || 4000;
+            const callsPerDay = parseInt(document.getElementById('calls-per-day').value) || 200;
+            const conversionRate = parseFloat(document.getElementById('conversion-rate').value) || 15;
+            const dealValue = parseInt(document.getElementById('deal-value').value) || 500;
+            
+            // Current costs
+            const monthlyAgentCost = currentAgents * agentSalary;
+            const annualAgentCost = monthlyAgentCost * 12;
+            
+            // Vocelio AI performance (conservative estimates)
+            const aiCallsPerDay = callsPerDay * 5; // 5x capacity (24/7 operation)
+            const aiConversionRate = conversionRate * 1.35; // 35% improvement
+            const aiMonthlySuccessfulCalls = (aiCallsPerDay * 30) * (aiConversionRate / 100);
+            const vocelioMonthlyCost = aiMonthlySuccessfulCalls * 0.20; // $0.20 per successful call
+            const vocelioAnnualCost = vocelioMonthlyCost * 12;
+            
+            // Revenue calculations
+            const currentMonthlyRevenue = (callsPerDay * 30) * (conversionRate / 100) * dealValue;
+            const aiMonthlyRevenue = aiMonthlySuccessfulCalls * dealValue;
+            
+            // Results
+            const annualSavings = annualAgentCost - vocelioAnnualCost;
+            const additionalRevenue = (aiMonthlyRevenue - currentMonthlyRevenue) * 12;
+            const totalBenefit = annualSavings + additionalRevenue;
+            const roiPercentage = (totalBenefit / vocelioAnnualCost) * 100;
+            const paybackMonths = vocelioAnnualCost / (totalBenefit / 12);
+            
+            // Fixed: Update UI with proper string formatting
+            document.getElementById('annual-savings').textContent = ' + annualSavings.toLocaleString();
+            document.getElementById('additional-revenue').textContent = ' + additionalRevenue.toLocaleString();
+            document.getElementById('total-benefit').textContent = ' + totalBenefit.toLocaleString();
+            document.getElementById('roi-percentage').textContent = roiPercentage.toFixed(0) + '%';
+            document.getElementById('payback-period').textContent = paybackMonths.toFixed(1) + ' months';
+        }
+        
+        // Demo call function
+        function callDemo() {
+            alert('📞 Call +1-555-VOCELIO to speak with our AI demo agent "Sarah"!\n\n✨ Available 24/7 in 13+ languages\n🤖 Powered by GPT-4 and ElevenLabs\n🔥 You won\'t believe it\'s AI!');
+            // For mobile devices, uncomment the line below to actually initiate a call
+            // window.open('tel:+15558623546', '_self');
+        }
+        
+        function contactSales() {
+            alert('🤝 Our sales team will contact you within 1 hour!\n\n📧 enterprise@vocelio.ai\n📞 +1-555-VOCELIO ext. 2\n💼 Custom pricing and white-label solutions available');
+            window.open('https://app.vocelio.ai', '_blank');
+        }
+        
+        // Initialize calculator on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            calculateROI();
+            
+            // Smooth scrolling for navigation links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add scroll animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.pricing-card, .value-card, .faq-item').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

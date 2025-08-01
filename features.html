@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocelio.ai Features - Complete AI Call Center Platform</title>
+    <meta name="description" content="Explore Vocelio.ai's revolutionary features: GPT-4 AI brain, human-like voices, global phone system, real-time analytics, and more. The world's most advanced AI call center.">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 28px;
+            animation: pulse 2s infinite;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: -5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        /* Feature Categories */
+        .feature-categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 12px 24px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.3);
+            border-radius: 8px;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+            color: white;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .feature-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .feature-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .feature-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            color: #94a3b8;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .feature-list li {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: linear-gradient(45deg, #10b981, #059669);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .feature-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(100, 116, 139, 0.3);
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3b82f6;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        
+        /* Detailed Feature Sections */
+        .detailed-feature {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 20px;
+            padding: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .detailed-feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .detailed-feature-content h3 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .detailed-feature-content p {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+        
+        .detailed-feature-visual {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .visual-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .metric-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .metric-value {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .metric-label {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        /* Comparison Table */
+        .comparison-section {
+            margin: 80px 0;
+        }
+        
+        .comparison-table {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-header {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .comparison-header h3 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .table th,
+        .table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.3);
+        }
+        
+        .table th {
+            background: rgba(30, 41, 59, 0.8);
+            font-weight: bold;
+            color: #e2e8f0;
+        }
+        
+        .table td {
+            color: #94a3b8;
+        }
+        
+        .table .check {
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .table .cross {
+            color: #ef4444;
+            font-weight: bold;
+        }
+        
+        .table .highlight {
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2));
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .cta-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-buttons .btn {
+            font-size: 18px;
+            padding: 18px 36px;
+        }
+        
+        /* Animations */
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .detailed-feature-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .feature-categories {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .feature-metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .detailed-feature {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">🔥</div>
+                    <div>
+                        <div class="logo-text">Vocelio.ai</div>
+                        <div class="logo-subtitle">World's Best AI Call Center</div>
+                    </div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/features" class="active">Features</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/#demo">Live Demo</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-secondary">Sign In</button>
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>→</span>
+                <span>Features</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">REVOLUTIONARY AI FEATURES</span><br>
+                That 10X Your Sales
+            </h1>
+            
+            <p class="hero-subtitle">
+                Explore the world's most advanced AI call center platform with cutting-edge features 
+                that transform how businesses handle customer calls and generate revenue.
+            </p>
+            
+            <!-- Feature Categories -->
+            <div class="feature-categories">
+                <button class="category-btn active" onclick="showCategory('all')">All Features</button>
+                <button class="category-btn" onclick="showCategory('ai')">🤖 AI Intelligence</button>
+                <button class="category-btn" onclick="showCategory('voice')">🎙️ Voice Technology</button>
+                <button class="category-btn" onclick="showCategory('phone')">📞 Phone System</button>
+                <button class="category-btn" onclick="showCategory('analytics')">📊 Analytics</button>
+                <button class="category-btn" onclick="showCategory('integration')">🔄 Integrations</button>
+                <button class="category-btn" onclick="showCategory('enterprise')">🏢 Enterprise</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="features-grid" id="features-grid">
+                <!-- AI Intelligence Features -->
+                <div class="feature-card fade-in" data-category="ai">
+                    <div class="feature-badge">🔥 REVOLUTIONARY</div>
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">GPT-4 Powered AI Brain</h3>
+                    <p class="feature-description">
+                        Advanced conversational AI that understands context, handles complex objections, 
+                        and maintains natural dialogue flow throughout entire sales conversations.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> Natural language understanding</li>
+                        <li><span style="color: #10b981;">✅</span> Context-aware responses</li>
+                        <li><span style="color: #10b981;">✅</span> Intelligent objection handling</li>
+                        <li><span style="color: #10b981;">✅</span> Dynamic conversation flow</li>
+                        <li><span style="color: #10b981;">✅</span> Personality customization</li>
+                        <li><span style="color: #10b981;">✅</span> Multi-turn conversations</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">97%</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">13+</div>
+                            <div class="stat-label">Languages</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Available</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in" data-category="ai">
+                    <div class="feature-badge">🧠 SMART</div>
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Real-Time Sentiment Analysis</h3>
+                    <p class="feature-description">
+                        Advanced emotion detection that analyzes customer sentiment in real-time, 
+                        allowing AI agents to adapt their approach and maximize conversion rates.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> Voice tone analysis</li>
+                        <li><span style="color: #10b981;">✅</span> Emotion detection</li>
+                        <li><span style="color: #10b981;">✅</span> Stress level monitoring</li>
+                        <li><span style="color: #10b981;">✅</span> Interest level tracking</li>
+                        <li><span style="color: #10b981;">✅</span> Adaptive responses</li>
+                        <li><span style="color: #10b981;">✅</span> Conversion prediction</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">89%</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">0.2s</div>
+                            <div class="stat-label">Response</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">35%</div>
+                            <div class="stat-label">Higher Close</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice Technology Features -->
+                <div class="feature-card fade-in" data-category="voice">
+                    <div class="feature-badge">🎙️ ULTRA-REALISTIC</div>
+                    <div class="feature-icon">🎭</div>
+                    <h3 class="feature-title">Human-Like Voice Synthesis</h3>
+                    <p class="feature-description">
+                        Powered by ElevenLabs' cutting-edge technology, our AI voices are so realistic 
+                        that 98% of customers can't distinguish them from human agents.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> 150+ premium voices</li>
+                        <li><span style="color: #10b981;">✅</span> 13+ language support</li>
+                        <li><span style="color: #10b981;">✅</span> Emotion control</li>
+                        <li><span style="color: #10b981;">✅</span> Speed adjustment</li>
+                        <li><span style="color: #10b981;">✅</span> Accent customization</li>
+                        <li><span style="color: #10b981;">✅</span> Voice cloning</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Human-like</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">150+</div>
+                            <div class="stat-label">Voices</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">13+</div>
+                            <div class="stat-label">Languages</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in" data-category="voice">
+                    <div class="feature-badge">🎵 DYNAMIC</div>
+                    <div class="feature-icon">🎼</div>
+                    <h3 class="feature-title">Dynamic Voice Emotions</h3>
+                    <p class="feature-description">
+                        AI voices that automatically adjust tone, pace, and emotion based on conversation 
+                        context and customer sentiment for maximum engagement and conversion.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> Automatic emotion adjustment</li>
+                        <li><span style="color: #10b981;">✅</span> Context-aware tone</li>
+                        <li><span style="color: #10b981;">✅</span> Excitement modulation</li>
+                        <li><span style="color: #10b981;">✅</span> Empathy expression</li>
+                        <li><span style="color: #10b981;">✅</span> Urgency control</li>
+                        <li><span style="color: #10b981;">✅</span> Confidence projection</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">45%</div>
+                            <div class="stat-label">Higher Engagement</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Emotions</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">Real-time</div>
+                            <div class="stat-label">Adaptation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone System Features -->
+                <div class="feature-card fade-in" data-category="phone">
+                    <div class="feature-badge">🌍 GLOBAL</div>
+                    <div class="feature-icon">📞</div>
+                    <h3 class="feature-title">Global Phone Infrastructure</h3>
+                    <p class="feature-description">
+                        Powered by Twilio's enterprise-grade infrastructure with coverage in 200+ countries, 
+                        local number provisioning, and 99.99% uptime guarantee.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> 200+ countries coverage</li>
+                        <li><span style="color: #10b981;">✅</span> Local number provisioning</li>
+                        <li><span style="color: #10b981;">✅</span> Call recording & transcripts</li>
+                        <li><span style="color: #10b981;">✅</span> Call quality monitoring</li>
+                        <li><span style="color: #10b981;">✅</span> Automatic failover</li>
+                        <li><span style="color: #10b981;">✅</span> SIP trunking support</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">99.99%</div>
+                            <div class="stat-label">Uptime</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">200+</div>
+                            <div class="stat-label">Countries</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">< 50ms</div>
+                            <div class="stat-label">Latency</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in" data-category="phone">
+                    <div class="feature-badge">🔄 SEAMLESS</div>
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Live Human Transfer</h3>
+                    <p class="feature-description">
+                        Intelligent call transfer system that seamlessly hands over complex calls to human agents 
+                        with full context and conversation history for maximum customer satisfaction.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> Intelligent transfer triggers</li>
+                        <li><span style="color: #10b981;">✅</span> Context preservation</li>
+                        <li><span style="color: #10b981;">✅</span> Conversation history</li>
+                        <li><span style="color: #10b981;">✅</span> Agent notifications</li>
+                        <li><span style="color: #10b981;">✅</span> Warm transfer protocol</li>
+                        <li><span style="color: #10b981;">✅</span> Customer preference tracking</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">< 3s</div>
+                            <div class="stat-label">Transfer Time</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">94%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Context Retained</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Features -->
+                <div class="feature-card fade-in" data-category="analytics">
+                    <div class="feature-badge">📊 REAL-TIME</div>
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">Advanced Analytics Dashboard</h3>
+                    <p class="feature-description">
+                        Comprehensive real-time analytics with AI-powered insights, conversion tracking, 
+                        and performance optimization recommendations to maximize your ROI.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> Real-time call monitoring</li>
+                        <li><span style="color: #10b981;">✅</span> Conversion tracking</li>
+                        <li><span style="color: #10b981;">✅</span> A/B testing framework</li>
+                        <li><span style="color: #10b981;">✅</span> ROI calculations</li>
+                        <li><span style="color: #10b981;">✅</span> Performance heatmaps</li>
+                        <li><span style="color: #10b981;">✅</span> Predictive analytics</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">Live</div>
+                            <div class="stat-label">Updates</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Metrics</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">AI</div>
+                            <div class="stat-label">Insights</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in" data-category="analytics">
+                    <div class="feature-badge">🎯 PREDICTIVE</div>
+                    <div class="feature-icon">🔮</div>
+                    <h3 class="feature-title">AI Performance Optimization</h3>
+                    <p class="feature-description">
+                        Machine learning algorithms continuously analyze call performance and automatically 
+                        optimize scripts, timing, and agent behavior for maximum conversion rates.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> Automatic script optimization</li>
+                        <li><span style="color: #10b981;">✅</span> Best time prediction</li>
+                        <li><span style="color: #10b981;">✅</span> Agent performance tuning</li>
+                        <li><span style="color: #10b981;">✅</span> Conversion rate prediction</li>
+                        <li><span style="color: #10b981;">✅</span> Campaign optimization</li>
+                        <li><span style="color: #10b981;">✅</span> Success pattern analysis</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">67%</div>
+                            <div class="stat-label">Performance Boost</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">Auto</div>
+                            <div class="stat-label">Optimization</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Learning</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integration Features -->
+                <div class="feature-card fade-in" data-category="integration">
+                    <div class="feature-badge">🔄 SEAMLESS</div>
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="feature-title">CRM & Tool Integrations</h3>
+                    <p class="feature-description">
+                        Native integrations with 50+ popular CRMs and business tools including Salesforce, 
+                        HubSpot, Pipedrive, and custom API connections for seamless workflow automation.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> Salesforce integration</li>
+                        <li><span style="color: #10b981;">✅</span> HubSpot connectivity</li>
+                        <li><span style="color: #10b981;">✅</span> Pipedrive sync</li>
+                        <li><span style="color: #10b981;">✅</span> Zapier automation</li>
+                        <li><span style="color: #10b981;">✅</span> Custom API access</li>
+                        <li><span style="color: #10b981;">✅</span> Webhook support</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Integrations</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">2-way</div>
+                            <div class="stat-label">Sync</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">Real-time</div>
+                            <div class="stat-label">Updates</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in" data-category="integration">
+                    <div class="feature-badge">⚡ INSTANT</div>
+                    <div class="feature-icon">🔔</div>
+                    <h3 class="feature-title">Smart Webhook System</h3>
+                    <p class="feature-description">
+                        Advanced webhook system that instantly notifies your applications of call events, 
+                        conversation outcomes, and customer interactions for real-time business automation.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> Real-time notifications</li>
+                        <li><span style="color: #10b981;">✅</span> Custom event triggers</li>
+                        <li><span style="color: #10b981;">✅</span> Retry mechanisms</li>
+                        <li><span style="color: #10b981;">✅</span> Authentication security</li>
+                        <li><span style="color: #10b981;">✅</span> Payload customization</li>
+                        <li><span style="color: #10b981;">✅</span> Event filtering</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">< 100ms</div>
+                            <div class="stat-label">Delivery</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">99.9%</div>
+                            <div class="stat-label">Reliability</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">Custom</div>
+                            <div class="stat-label">Events</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise Features -->
+                <div class="feature-card fade-in" data-category="enterprise">
+                    <div class="feature-badge">🏢 ENTERPRISE</div>
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Enterprise Security & Compliance</h3>
+                    <p class="feature-description">
+                        Bank-level security with TCPA/GDPR compliance, SOC 2 certification, 
+                        end-to-end encryption, and comprehensive audit trails for enterprise peace of mind.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> SOC 2 Type II certified</li>
+                        <li><span style="color: #10b981;">✅</span> TCPA/GDPR compliant</li>
+                        <li><span style="color: #10b981;">✅</span> End-to-end encryption</li>
+                        <li><span style="color: #10b981;">✅</span> Audit trail logging</li>
+                        <li><span style="color: #10b981;">✅</span> Role-based access</li>
+                        <li><span style="color: #10b981;">✅</span> Data residency options</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">SOC 2</div>
+                            <div class="stat-label">Certified</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">256-bit</div>
+                            <div class="stat-label">Encryption</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Compliant</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-card fade-in" data-category="enterprise">
+                    <div class="feature-badge">🎨 WHITE-LABEL</div>
+                    <div class="feature-icon">🏷️</div>
+                    <h3 class="feature-title">White-Label Solution</h3>
+                    <p class="feature-description">
+                        Complete white-label platform allowing agencies and resellers to offer Vocelio.ai 
+                        under their own brand with custom domains, logos, and pricing structures.
+                    </p>
+                    <ul class="feature-list">
+                        <li><span style="color: #10b981;">✅</span> Custom domain setup</li>
+                        <li><span style="color: #10b981;">✅</span> Brand customization</li>
+                        <li><span style="color: #10b981;">✅</span> Logo integration</li>
+                        <li><span style="color: #10b981;">✅</span> Custom pricing tiers</li>
+                        <li><span style="color: #10b981;">✅</span> Reseller dashboard</li>
+                        <li><span style="color: #10b981;">✅</span> Revenue sharing</li>
+                    </ul>
+                    <div class="feature-stats">
+                        <div class="stat">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Branded</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">Custom</div>
+                            <div class="stat-label">Pricing</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">Revenue</div>
+                            <div class="stat-label">Sharing</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Feature Sections -->
+    <section class="section">
+        <div class="container">
+            <!-- AI Intelligence Deep Dive -->
+            <div class="detailed-feature">
+                <div class="detailed-feature-grid">
+                    <div class="detailed-feature-content">
+                        <h3><span class="gradient-text">AI Intelligence Engine</span></h3>
+                        <p>
+                            Our GPT-4 powered AI brain doesn't just follow scripts - it thinks, adapts, and evolves. 
+                            With advanced natural language processing and machine learning, our AI agents handle 
+                            complex conversations with human-like intelligence and emotional awareness.
+                        </p>
+                        <ul class="feature-list">
+                            <li><span style="color: #10b981;">✅</span> Multi-turn conversation management</li>
+                            <li><span style="color: #10b981;">✅</span> Context awareness across calls</li>
+                            <li><span style="color: #10b981;">✅</span> Dynamic personality adaptation</li>
+                            <li><span style="color: #10b981;">✅</span> Industry-specific knowledge base</li>
+                        </ul>
+                    </div>
+                    <div class="detailed-feature-visual">
+                        <div class="visual-placeholder">🧠</div>
+                        <h4>AI Performance Metrics</h4>
+                        <div class="feature-metrics">
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: #3b82f6;">97.3%</div>
+                                <div class="metric-label">Conversation Success Rate</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: #10b981;">2.4s</div>
+                                <div class="metric-label">Average Response Time</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: #8b5cf6;">89%</div>
+                                <div class="metric-label">Intent Recognition Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice Technology Deep Dive -->
+            <div class="detailed-feature">
+                <div class="detailed-feature-grid">
+                    <div class="detailed-feature-visual">
+                        <div class="visual-placeholder">🎙️</div>
+                        <h4>Voice Quality Comparison</h4>
+                        <div class="feature-metrics">
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: #10b981;">98.2%</div>
+                                <div class="metric-label">Human-Like Rating</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: #3b82f6;">150+</div>
+                                <div class="metric-label">Available Voices</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: #ec4899;">13+</div>
+                                <div class="metric-label">Languages Supported</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detailed-feature-content">
+                        <h3><span class="gradient-text">Ultra-Realistic Voice Technology</span></h3>
+                        <p>
+                            Powered by ElevenLabs' revolutionary voice synthesis, our AI agents sound so human 
+                            that customers regularly ask to speak to the same "person" again. With emotion control, 
+                            accent customization, and real-time adaptation, we've eliminated the robotic feel entirely.
+                        </p>
+                        <ul class="feature-list">
+                            <li><span style="color: #10b981;">✅</span> Real-time emotion modulation</li>
+                            <li><span style="color: #10b981;">✅</span> Breathing and pause simulation</li>
+                            <li><span style="color: #10b981;">✅</span> Regional accent matching</li>
+                            <li><span style="color: #10b981;">✅</span> Voice aging and gender options</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global Infrastructure Deep Dive -->
+            <div class="detailed-feature">
+                <div class="detailed-feature-grid">
+                    <div class="detailed-feature-content">
+                        <h3><span class="gradient-text">Global Phone Infrastructure</span></h3>
+                        <p>
+                            Built on Twilio's enterprise-grade infrastructure with redundant systems across 
+                            multiple continents. Our platform handles millions of concurrent calls with 
+                            crystal-clear quality and virtually zero downtime.
+                        </p>
+                        <ul class="feature-list">
+                            <li><span style="color: #10b981;">✅</span> Multi-region redundancy</li>
+                            <li><span style="color: #10b981;">✅</span> Automatic failover systems</li>
+                            <li><span style="color: #10b981;">✅</span> Quality monitoring & optimization</li>
+                            <li><span style="color: #10b981;">✅</span> Enterprise SLA guarantees</li>
+                        </ul>
+                    </div>
+                    <div class="detailed-feature-visual">
+                        <div class="visual-placeholder">🌍</div>
+                        <h4>Global Coverage Stats</h4>
+                        <div class="feature-metrics">
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: #f97316;">200+</div>
+                                <div class="metric-label">Countries Covered</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: #10b981;">99.99%</div>
+                                <div class="metric-label">Uptime SLA</div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-value" style="color: #3b82f6;">&lt; 50ms</div>
+                                <div class="metric-label">Global Latency</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <h3>Vocelio.ai vs Traditional Call Centers</h3>
+                    <p>See why thousands of companies are switching to AI</p>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Traditional Call Center</th>
+                                <th class="highlight">Vocelio.ai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Availability</strong></td>
+                                <td class="cross">❌ Business hours only</td>
+                                <td class="check">✅ 24/7/365 operation</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Scalability</strong></td>
+                                <td class="cross">❌ Weeks to hire & train</td>
+                                <td class="check">✅ Instant scaling to millions</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Consistency</strong></td>
+                                <td class="cross">❌ Varies by agent mood</td>
+                                <td class="check">✅ Perfect consistency always</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Languages</strong></td>
+                                <td class="cross">❌ Limited by hiring</td>
+                                <td class="check">✅ 13+ languages instantly</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cost per call</strong></td>
+                                <td class="cross">❌ $15-25 per call</td>
+                                <td class="check">✅ $0.20 per successful call</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Training time</strong></td>
+                                <td class="cross">❌ 2-6 weeks minimum</td>
+                                <td class="check">✅ 5 minutes setup</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Performance tracking</strong></td>
+                                <td class="cross">❌ Manual monitoring</td>
+                                <td class="check">✅ Real-time AI analytics</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sick days/turnover</strong></td>
+                                <td class="cross">❌ Constant issue</td>
+                                <td class="check">✅ Never happens</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">
+                <span class="gradient-text">Ready to Experience These Features?</span>
+            </h2>
+            <p class="cta-subtitle">
+                Start your free trial today and see why Vocelio.ai is the world's #1 AI call center platform
+            </p>
+            <div class="cta-buttons">
+                <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">
+                    🚀 Start Free Trial - 100 Calls Free
+                </button>
+                <button onclick="callDemo()" class="btn btn-secondary">
+                    📞 Call Live Demo: +1-555-VOCELIO
+                </button>
+            </div>
+            <div style="margin-top: 30px; color: #94a3b8;">
+                <p>✅ No Credit Card Required • ✅ 5 Minute Setup • ✅ 24/7 Support</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Category filtering
+        function showCategory(category) {
+            const cards = document.querySelectorAll('.feature-card');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            // Update button states
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    card.classList.add('fade-in');
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        // Demo call function
+        function callDemo() {
+            alert('📞 Call +1-555-VOCELIO to speak with our AI demo agent "Sarah"!\n\n✨ Available 24/7 in 13+ languages\n🤖 Powered by GPT-4 and ElevenLabs\n🔥 You won\'t believe it\'s AI!');
+            // For mobile devices, uncomment the line below to actually initiate a call
+            // window.open('tel:+15558623546', '_self');
+        }
+        
+        // Smooth scrolling for navigation links
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add scroll animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe feature cards
+            document.querySelectorAll('.feature-card, .detailed-feature').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
