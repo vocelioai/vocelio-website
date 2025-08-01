@@ -1322,14 +1322,27 @@
                 });
             }, observerOptions);
             
-            // Observe feature cards
-            document.querySelectorAll('.feature-card, .detailed-feature').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(card);
-            });
-        });
-    </script>
+               // Observe feature cards
+   document.querySelectorAll('.feature-card, .detailed-feature').forEach(card => {
+       card.style.opacity = '0';
+       card.style.transform = 'translateY(30px)';
+       card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+       observer.observe(card);
+   });
+
+   // Load footer dynamically
+   fetch("components/footer.html")
+     .then(response => response.text())
+     .then(data => {
+       document.getElementById("footer").innerHTML = data;
+     })
+     .catch(error => console.error("Footer failed to load:", error));
+
+});
+</script>
+
+<!-- Footer Section -->
+<div id="footer"></div>
+
 </body>
 </html>
