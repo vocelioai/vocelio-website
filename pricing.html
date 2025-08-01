@@ -1221,14 +1221,27 @@
                 });
             }, observerOptions);
             
-            // Observe elements for animation
-            document.querySelectorAll('.pricing-card, .value-card, .faq-item').forEach(element => {
-                element.style.opacity = '0';
-                element.style.transform = 'translateY(30px)';
-                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-                observer.observe(element);
-            });
-        });
-    </script>
+               // Observe elements for animation
+   document.querySelectorAll('.pricing-card, .value-card, .faq-item').forEach(element => {
+       element.style.opacity = '0';
+       element.style.transform = 'translateY(30px)';
+       element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+       observer.observe(element);
+   });
+
+   // Load footer dynamically
+   fetch("components/footer.html")
+     .then(response => response.text())
+     .then(data => {
+       document.getElementById("footer").innerHTML = data;
+     })
+     .catch(error => console.error("Footer failed to load:", error));
+
+});
+</script>
+
+<!-- Footer Section -->
+<div id="footer"></div>
+
 </body>
 </html>
