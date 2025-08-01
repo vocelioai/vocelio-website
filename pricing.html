@@ -1168,9 +1168,9 @@
             const paybackMonths = vocelioAnnualCost / (totalBenefit / 12);
             
             // Fixed: Update UI with proper string formatting
-            document.getElementById('annual-savings').textContent = ' + annualSavings.toLocaleString();
-            document.getElementById('additional-revenue').textContent = ' + additionalRevenue.toLocaleString();
-            document.getElementById('total-benefit').textContent = ' + totalBenefit.toLocaleString();
+            document.getElementById('annual-savings').textContent = '$' + annualSavings.toLocaleString();
+            document.getElementById('additional-revenue').textContent = '$' + additionalRevenue.toLocaleString();
+            document.getElementById('total-benefit').textContent = '$' + totalBenefit.toLocaleString();
             document.getElementById('roi-percentage').textContent = roiPercentage.toFixed(0) + '%';
             document.getElementById('payback-period').textContent = paybackMonths.toFixed(1) + ' months';
         }
