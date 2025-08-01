@@ -1304,15 +1304,51 @@
                     </div>
                 </div>
                 
-                <div class="conversation-card">
-                    <h3 class="conversation-title">☀️ Solar Sales Appointment Setting</h3>
-                    
-                    <div class="conversation-turn ai">
-                        <div class="turn-label">AI Mike</div>
-                        <div class="turn-text">
-                            "Hi! This is Mike from Green Energy Solutions. I'm calling because you qualify for the new federal solar tax credit. Are you the homeowner?"
-                        </div>
-                    </div>
-                    
-                    <div class="conversation-turn human">
-                        <div class="turn-label">Prospect
+                <!-- Conversation Section -->
+<div class="conversation-card">
+    <h3 class="conversation-title">☀️ Solar Sales Appointment Setting</h3>
+    
+    <div class="conversation-turn ai">
+        <div class="turn-label">AI Mike</div>
+        <div class="turn-text">
+            "Hi! This is Mike from Green Energy Solutions. I'm calling because you qualify for the new federal solar tax credit. Are you the homeowner?"
+        </div>
+    </div>
+    
+    <div class="conversation-turn human">
+        <div class="turn-label">Prospect</div>
+        <div class="turn-text">
+            "Yes"
+        </div>
+    </div>
+    
+    <!-- add more conversation-turns here as needed -->
+</div>
+
+<!-- JS for animations & footer -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Observe demo elements for animation
+        document.querySelectorAll('.instruction-card, .conversation-card, .analytics-card, .demo-feature')
+            .forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(element);
+            });
+
+        // Load footer dynamically
+        fetch("components/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => console.error("Footer failed to load:", error));
+    });
+</script>
+
+<!-- Footer Section -->
+<div id="footer"></div>
+
+</body>
+</html>
