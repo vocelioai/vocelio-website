@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://vocelio.ai/sitemap.xml
