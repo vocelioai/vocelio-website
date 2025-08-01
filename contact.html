@@ -1083,17 +1083,30 @@
                 observer.observe(element);
             });
             
-            // Add hover effects for contact cards
-            document.querySelectorAll('.contact-card').forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-        });
-    </script>
+               // Add hover effects for contact cards
+   document.querySelectorAll('.contact-card').forEach(card => {
+       card.addEventListener('mouseenter', function() {
+           this.style.transform = 'translateY(-10px) scale(1.02)';
+       });
+       
+       card.addEventListener('mouseleave', function() {
+           this.style.transform = 'translateY(0) scale(1)';
+       });
+   });
+
+   // Load footer dynamically
+   fetch("components/footer.html")
+     .then(response => response.text())
+     .then(data => {
+       document.getElementById("footer").innerHTML = data;
+     })
+     .catch(error => console.error("Footer failed to load:", error));
+
+});
+</script>
+
+<!-- Footer Section -->
+<div id="footer"></div>
+
 </body>
 </html>
