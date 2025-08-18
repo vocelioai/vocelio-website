@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocelio.ai for Real Estate - AI Lead Qualification & Follow-up</title>
+    <meta name="description" content="Transform your real estate business with AI agents that qualify leads, schedule showings, and nurture prospects 24/7. Generate more listings and sales with Vocelio.ai.">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vocelio.ai/real-estate.html">
+    <meta property="og:title" content="Vocelio.ai for Real Estate - AI Lead Qualification & Follow-up">
+    <meta property="og:description" content="Transform your real estate business with AI agents that qualify leads, schedule showings, and nurture prospects 24/7. Generate more listings and sales with Vocelio.ai.">
+    <meta property="og:image" content="/android-chrome-512x512.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vocelio.ai for Real Estate - AI Lead Qualification & Follow-up">
+    <meta name="twitter:description" content="Transform your real estate business with AI agents that qualify leads, schedule showings, and nurture prospects 24/7. Generate more listings and sales with Vocelio.ai.">
+    <meta name="twitter:image" content="/android-chrome-512x512.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Vocelio.ai for Real Estate",
+      "url": "https://vocelio.ai/real-estate.html",
+      "description": "Transform your real estate business with AI agents that qualify leads, schedule showings, and nurture prospects 24/7.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Vocelio.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://vocelio.ai/android-chrome-512x512.png"
+        }
+      }
+    }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 28px;
+            animation: pulse 2s infinite;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: -5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: white;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #10b981, #059669, #3b82f6, #06b6d4);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+            background: rgba(16, 185, 129, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+        }
+        
+        .stat-card {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 48px;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Use Cases Grid */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .use-case-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .use-case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .use-case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(45deg, #10b981, #059669);
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .use-case-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .use-case-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #10b981;
+        }
+        
+        .use-case-description {
+            color: #94a3b8;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .use-case-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .use-case-features li {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .use-case-roi {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .roi-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 10px;
+        }
+        
+        .roi-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 5px;
+        }
+        
+        .roi-description {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        
+        /* Conversation Examples */
+        .conversation-section {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 80px 0;
+        }
+        
+        .conversation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+        }
+        
+        .conversation-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .conversation-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .conversation-turn {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        
+        .conversation-turn.ai {
+            background: rgba(16, 185, 129, 0.2);
+            border-left: 3px solid #10b981;
+        }
+        
+        .conversation-turn.human {
+            background: rgba(59, 130, 246, 0.2);
+            border-left: 3px solid #3b82f6;
+        }
+        
+        .turn-label {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        
+        .turn-text {
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #10b981;
+        }
+        
+        .feature-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #e2e8f0;
+        }
+        
+        .feature-description {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        /* Success Stories */
+        .success-stories {
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 80px 0;
+        }
+        
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .story-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 40px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .story-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .story-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #10b981, #059669);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+        }
+        
+        .story-info h4 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e2e8f0;
+        }
+        
+        .story-info p {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        .story-quote {
+            font-style: italic;
+            color: #e2e8f0;
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .story-results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .result-item {
+            text-align: center;
+        }
+        
+        .result-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 5px;
+        }
+        
+        .result-label {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(3, 105, 161, 0.2));
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            margin: 80px 0;
+        }
+        
+        .cta-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-buttons .btn {
+            font-size: 18px;
+            padding: 18px 36px;
+        }
+        
+        /* Animations */
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .use-cases-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .conversation-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .conversation-section,
+            .success-stories,
+            .cta-section {
+                padding: 40px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">🔥</div>
+                    <div>
+                        <div class="logo-text">Vocelio.ai</div>
+                        <div class="logo-subtitle">World's Best AI Call Center</div>
+                    </div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="demo.html">Live Demo</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-secondary">Sign In</button>
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>→</span>
+                <span>Industries</span>
+                <span>→</span>
+                <span>Real Estate</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">10X YOUR REAL ESTATE</span><br>
+                SALES WITH AI AGENTS
+            </h1>
+            
+            <p class="hero-subtitle">
+                Transform your real estate business with AI agents that qualify leads, schedule showings, 
+                and nurture prospects 24/7. Generate more listings, close more deals, and scale your business effortlessly.
+            </p>
+            
+            <!-- Hero Stats -->
+            <div class="hero-stats fade-in">
+                <div class="stat-card">
+                    <div class="stat-value">347%</div>
+                    <div class="stat-label">Increase in Qualified Leads</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Lead Response Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">89%</div>
+                    <div class="stat-label">Lead Qualification Success</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$2.4M</div>
+                    <div class="stat-label">Additional Revenue Generated</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">AI-Powered Real Estate Solutions</span>
+            </h2>
+            <p class="section-subtitle">
+                Discover how Vocelio.ai can transform every aspect of your real estate business
+            </p>
+            
+            <div class="use-cases-grid">
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">🏠</div>
+                    <h3 class="use-case-title">Lead Qualification</h3>
+                    <p class="use-case-description">
+                        Instantly qualify leads from Zillow, Realtor.com, and your website. AI agents ask the right questions 
+                        to identify serious buyers and sellers, saving you hours of manual screening.
+                    </p>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> Pre-approval status verification</li>
+                        <li><span style="color: #10b981;">✅</span> Budget and timeline qualification</li>
+                        <li><span style="color: #10b981;">✅</span> Preferred location identification</li>
+                        <li><span style="color: #10b981;">✅</span> Motivation level assessment</li>
+                        <li><span style="color: #10b981;">✅</span> Contact preference collection</li>
+                    </ul>
+                    <div class="use-case-roi">
+                        <div class="roi-title">Average ROI</div>
+                        <div class="roi-value">450%</div>
+                        <div class="roi-description">More qualified leads, less time wasted</div>
+                    </div>
+                </div>
+
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">📅</div>
+                    <h3 class="use-case-title">Appointment Scheduling</h3>
+                    <p class="use-case-description">
+                        Automatically schedule property showings, listing appointments, and consultations. 
+                        AI agents coordinate with your calendar and send confirmations to all parties.
+                    </p>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> Calendar integration (Google, Outlook)</li>
+                        <li><span style="color: #10b981;">✅</span> Automatic confirmation & reminders</li>
+                        <li><span style="color: #10b981;">✅</span> Reschedule management</li>
+                        <li><span style="color: #10b981;">✅</span> Showing coordination</li>
+                        <li><span style="color: #10b981;">✅</span> Multi-party scheduling</li>
+                    </ul>
+                    <div class="use-case-roi">
+                        <div class="roi-title">Time Saved</div>
+                        <div class="roi-value">15 hrs</div>
+                        <div class="roi-description">Per week scheduling appointments</div>
+                    </div>
+                </div>
+
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">🔄</div>
+                    <h3 class="use-case-title">Lead Nurturing</h3>
+                    <p class="use-case-description">
+                        Keep prospects engaged with intelligent follow-up campaigns. AI agents provide market updates, 
+                        new listing alerts, and maintain relationships until prospects are ready to buy or sell.
+                    </p>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> Automated follow-up sequences</li>
+                        <li><span style="color: #10b981;">✅</span> Market update delivery</li>
+                        <li><span style="color: #10b981;">✅</span> New listing notifications</li>
+                        <li><span style="color: #10b981;">✅</span> Price drop alerts</li>
+                        <li><span style="color: #10b981;">✅</span> Relationship maintenance</li>
+                    </ul>
+                    <div class="use-case-roi">
+                        <div class="roi-title">Conversion Increase</div>
+                        <div class="roi-value">67%</div>
+                        <div class="roi-description">From nurtured leads vs cold outreach</div>
+                    </div>
+                </div>
+
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">💰</div>
+                    <h3 class="use-case-title">Listing Generation</h3>
+                    <p class="use-case-description">
+                        Proactively reach out to homeowners in target areas to generate new listings. 
+                        AI agents gauge interest in selling and qualify potential listing opportunities.
+                    </p>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> Expired listing follow-up</li>
+                        <li><span style="color: #10b981;">✅</span> FSBO conversion</li>
+                        <li><span style="color: #10b981;">✅</span> Geographic farming campaigns</li>
+                        <li><span style="color: #10b981;">✅</span> Market valuation offers</li>
+                        <li><span style="color: #10b981;">✅</span> Listing appointment setting</li>
+                    </ul>
+                    <div class="use-case-roi">
+                        <div class="roi-title">New Listings</div>
+                        <div class="roi-value">23</div>
+                        <div class="roi-description">Additional listings per month</div>
+                    </div>
+                </div>
+
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">🏘️</div>
+                    <h3 class="use-case-title">Open House Follow-up</h3>
+                    <p class="use-case-description">
+                        Follow up with every open house visitor within hours. AI agents gauge interest, 
+                        answer questions, and schedule private showings while the property is still fresh in their minds.
+                    </p>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> Immediate post-visit follow-up</li>
+                        <li><span style="color: #10b981;">✅</span> Interest level assessment</li>
+                        <li><span style="color: #10b981;">✅</span> Additional questions handling</li>
+                        <li><span style="color: #10b981;">✅</span> Private showing scheduling</li>
+                        <li><span style="color: #10b981;">✅</span> Feedback collection</li>
+                    </ul>
+                    <div class="use-case-roi">
+                        <div class="roi-title">Conversion Rate</div>
+                        <div class="roi-value">34%</div>
+                        <div class="roi-description">Open house visitors to appointments</div>
+                    </div>
+                </div>
+
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">🔍</div>
+                    <h3 class="use-case-title">Buyer Matching</h3>
+                    <p class="use-case-description">
+                        Match qualified buyers with perfect properties automatically. AI agents notify buyers 
+                        about new listings that match their criteria and schedule immediate showings.
+                    </p>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> Criteria-based matching</li>
+                        <li><span style="color: #10b981;">✅</span> Instant listing notifications</li>
+                        <li><span style="color: #10b981;">✅</span> Virtual tour scheduling</li>
+                        <li><span style="color: #10b981;">✅</span> Competitive market analysis</li>
+                        <li><span style="color: #10b981;">✅</span> Offer strategy consultation</li>
+                    </ul>
+                    <div class="use-case-roi">
+                        <div class="roi-title">Faster Sales</div>
+                        <div class="roi-value">18 days</div>
+                        <div class="roi-description">Faster average time to sale</div>
+                    </div>
+                </div>
+
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">📞</div>
+                    <h3 class="use-case-title">Past Client Reactivation</h3>
+                    <p class="use-case-description">
+                        Reconnect with past clients to generate referrals and repeat business. AI agents conduct 
+                        annual check-ins, anniversary calls, and market update conversations to stay top-of-mind.
+                    </p>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> Anniversary date reminders</li>
+                        <li><span style="color: #10b981;">✅</span> Market update delivery</li>
+                        <li><span style="color: #10b981;">✅</span> Referral request conversations</li>
+                        <li><span style="color: #10b981;">✅</span> Investment property opportunities</li>
+                        <li><span style="color: #10b981;">✅</span> Family update check-ins</li>
+                    </ul>
+                    <div class="use-case-roi">
+                        <div class="roi-title">Referral Increase</div>
+                        <div class="roi-value">156%</div>
+                        <div class="roi-description">More referrals from past clients</div>
+                    </div>
+                </div>
+
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">📊</div>
+                    <h3 class="use-case-title">Market Research Calls</h3>
+                    <p class="use-case-description">
+                        Conduct neighborhood market research and gather property information. AI agents call homeowners 
+                        to collect data on recent improvements, market sentiment, and potential selling interest.
+                    </p>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> Neighborhood surveys</li>
+                        <li><span style="color: #10b981;">✅</span> Property improvement tracking</li>
+                        <li><span style="color: #10b981;">✅</span> Market sentiment analysis</li>
+                        <li><span style="color: #10b981;">✅</span> Competitive intelligence</li>
+                        <li><span style="color: #10b981;">✅</span> Area development updates</li>
+                    </ul>
+                    <div class="use-case-roi">
+                        <div class="roi-title">Market Intelligence</div>
+                        <div class="roi-value">95%</div>
+                        <div class="roi-description">More accurate pricing strategies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Estate Features -->
+    <section class="section" style="background: rgba(15, 23, 42, 0.8);">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">Built for Real Estate Professionals</span>
+            </h2>
+            <p class="section-subtitle">
+                Specialized features designed specifically for the real estate industry
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏡</div>
+                    <h3 class="feature-title">MLS Integration</h3>
+                    <p class="feature-description">
+                        Direct integration with MLS systems for real-time property data and automated listing updates.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💳</div>
+                    <h3 class="feature-title">Mortgage Pre-qualification</h3>
+                    <p class="feature-description">
+                        Connect with lenders to verify buyer pre-approval status and financial readiness.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Market Analysis</h3>
+                    <p class="feature-description">
+                        Provide instant comparative market analysis and property valuations to prospects.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">CRM Sync</h3>
+                    <p class="feature-description">
+                        Seamless integration with Top Producer, Chime, KvCore, and other real estate CRMs.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎥</div>
+                    <h3 class="feature-title">Virtual Tour Scheduling</h3>
+                    <p class="feature-description">
+                        Coordinate virtual property tours and send meeting links automatically.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📋</div>
+                    <h3 class="feature-title">TCPA Compliance</h3>
+                    <p class="feature-description">
+                        Built-in compliance features for real estate calling regulations and opt-out management.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Lead Scoring</h3>
+                    <p class="feature-description">
+                        AI-powered lead scoring based on engagement, timeline, and qualification criteria.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">Multi-Channel Follow-up</h3>
+                    <p class="feature-description">
+                        Coordinate calls, texts, emails, and social media outreach in one unified system.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conversation Examples -->
+    <section class="conversation-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">Real Estate AI Conversations</span>
+            </h2>
+            <p class="section-subtitle">
+                See how our AI agents handle real estate conversations with prospects
+            </p>
+            
+            <div class="conversation-grid">
+                <div class="conversation-card">
+                    <h3 class="conversation-title">
+                        🏠 Buyer Lead Qualification
+                    </h3>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Sarah</div>
+                        <div class="turn-text">
+                            "Hi! This is Sarah calling about the property inquiry you made on our website. 
+                            Do you have a quick minute to discuss your home buying timeline?"
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn human">
+                        <div class="turn-label">Prospect</div>
+                        <div class="turn-text">
+                            "Oh yes, I was looking at that 3-bedroom house in Westfield."
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Sarah</div>
+                        <div class="turn-text">
+                            "Perfect! That's a beautiful property. Are you currently pre-approved for a mortgage, 
+                            or would you like me to connect you with one of our preferred lenders?"
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn human">
+                        <div class="turn-label">Prospect</div>
+                        <div class="turn-text">
+                            "I haven't started the pre-approval process yet. Is that something I need right away?"
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Sarah</div>
+                        <div class="turn-text">
+                            "It's definitely helpful! Pre-approval shows sellers you're serious and can close quickly. 
+                            I can have our mortgage specialist call you today to get started. In the meantime, 
+                            would you like to schedule a showing for this weekend?"
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="conversation-card">
+                    <h3 class="conversation-title">
+                        💰 Listing Generation Call
+                    </h3>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Mike</div>
+                        <div class="turn-text">
+                            "Hello! This is Mike from Premier Realty. I noticed your home is in a very desirable 
+                            area where we've had great success. Have you ever considered what your home might be worth 
+                            in today's market?"
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn human">
+                        <div class="turn-label">Homeowner</div>
+                        <div class="turn-text">
+                            "Well, I've wondered about that. We bought it 5 years ago for $320k."
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Mike</div>
+                        <div class="turn-text">
+                            "That's great! The market has been very strong in your neighborhood. Similar homes 
+                            are selling for $420k to $450k. Would you be interested in a free, no-obligation 
+                            market analysis to see exactly what your home could sell for?"
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn human">
+                        <div class="turn-label">Homeowner</div>
+                        <div class="turn-text">
+                            "Really? That much? Yes, I'd be very interested in that analysis."
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Mike</div>
+                        <div class="turn-text">
+                            "Excellent! I can have one of our top agents come by this week to provide a detailed 
+                            comparative market analysis. What day works better for you - Tuesday evening or Saturday morning?"
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="conversation-card">
+                    <h3 class="conversation-title">
+                        📅 Open House Follow-up
+                    </h3>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Lisa</div>
+                        <div class="turn-text">
+                            "Hi! This is Lisa from Sunset Realty. You visited our open house on Maple Street 
+                            yesterday. I wanted to follow up and see what you thought of the property."
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn human">
+                        <div class="turn-label">Visitor</div>
+                        <div class="turn-text">
+                            "Oh yes! We really loved the kitchen and the backyard. My wife was especially 
+                            impressed with the master suite."
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Lisa</div>
+                        <div class="turn-text">
+                            "That's wonderful to hear! The kitchen was just renovated last year with quartz 
+                            countertops and stainless steel appliances. Do you have any questions about the property 
+                            that I can answer?"
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn human">
+                        <div class="turn-label">Visitor</div>
+                        <div class="turn-text">
+                            "We were wondering about the schools in the area and the property taxes."
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Lisa</div>
+                        <div class="turn-text">
+                            "Great questions! The home is in the highly-rated Westfield School District - the elementary 
+                            school has a 9/10 rating. Property taxes are $4,200 annually. Would you like to schedule 
+                            a private showing so you can take your time exploring and asking questions?"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conversation-card">
+                    <h3 class="conversation-title">
+                        🔄 Lead Nurturing Follow-up
+                    </h3>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Emma</div>
+                        <div class="turn-text">
+                            "Hi John! This is Emma from Downtown Realty. I wanted to follow up on the market analysis 
+                            we discussed last month. The market has shifted in your favor - similar homes are now 
+                            selling for 8% more than we projected."
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn human">
+                        <div class="turn-label">Past Client</div>
+                        <div class="turn-text">
+                            "Really? That's interesting. We weren't planning to sell until next year, but if the 
+                            market is this strong..."
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Emma</div>
+                        <div class="turn-text">
+                            "Exactly! Inventory is still low, and we're seeing multiple offers on well-priced homes. 
+                            Your neighbor on Oak Street just sold for $485k - that's $35k over asking. Would you like 
+                            me to prepare an updated market analysis for your home?"
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn human">
+                        <div class="turn-label">Past Client</div>
+                        <div class="turn-text">
+                            "Yes, definitely! And maybe we should discuss timing. If the market is this hot, 
+                            maybe we shouldn't wait."
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-turn ai">
+                        <div class="turn-label">AI Agent Emma</div>
+                        <div class="turn-text">
+                            "I completely agree! Let me schedule a time for us to review the current numbers and 
+                            discuss your options. How does Thursday evening work for you?"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">Real Estate Success Stories</span>
+            </h2>
+            <p class="section-subtitle">
+                See how real estate professionals are transforming their businesses with Vocelio.ai
+            </p>
+            
+            <div class="stories-grid">
+                <div class="story-card fade-in">
+                    <div class="story-header">
+                        <div class="story-avatar">JM</div>
+                        <div class="story-info">
+                            <h4>Jennifer Martinez</h4>
+                            <p>Top Producer, Keller Williams</p>
+                        </div>
+                    </div>
+                    <div class="story-quote">
+                        "Vocelio.ai transformed my business overnight. I went from manually calling 50 leads per week 
+                        to having AI agents qualify 500+ leads while I focus on closings and listings. My income 
+                        doubled in just 6 months!"
+                    </div>
+                    <div class="story-results">
+                        <div class="result-item">
+                            <div class="result-value">347%</div>
+                            <div class="result-label">Lead Increase</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value">$2.1M</div>
+                            <div class="result-label">Additional Revenue</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value">23</div>
+                            <div class="result-label">New Listings/Month</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card fade-in">
+                    <div class="story-header">
+                        <div class="story-avatar">RS</div>
+                        <div class="story-info">
+                            <h4>Robert Sterling</h4>
+                            <p>Broker/Owner, Sterling Real Estate</p>
+                        </div>
+                    </div>
+                    <div class="story-quote">
+                        "As a broker with 15 agents, Vocelio.ai gave us a competitive edge. Our team now responds 
+                        to leads in under 2 minutes, and we've seen a 45% increase in conversions. It's like having 
+                        24/7 ISAs for every agent."
+                    </div>
+                    <div class="story-results">
+                        <div class="result-item">
+                            <div class="result-value">< 2min</div>
+                            <div class="result-label">Response Time</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value">45%</div>
+                            <div class="result-label">Conversion Increase</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value">15</div>
+                            <div class="result-label">Agents Supported</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card fade-in">
+                    <div class="story-header">
+                        <div class="story-avatar">AL</div>
+                        <div class="story-info">
+                            <h4>Amanda Liu</h4>
+                            <p>Luxury Specialist, Sotheby's</p>
+                        </div>
+                    </div>
+                    <div class="story-quote">
+                        "In luxury real estate, every lead is precious. Vocelio.ai helps me nurture high-net-worth 
+                        prospects with personalized follow-up. I closed three $2M+ deals last quarter directly 
+                        from AI-nurtured leads."
+                    </div>
+                    <div class="story-results">
+                        <div class="result-item">
+                            <div class="result-value">$6.2M</div>
+                            <div class="result-label">Deals Closed</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value">89%</div>
+                            <div class="result-label">Lead Quality</div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-value">24/7</div>
+                            <div class="result-label">Nurturing Active</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="section" style="background: rgba(30, 41, 59, 0.3);">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">Seamless Real Estate Integrations</span>
+            </h2>
+            <p class="section-subtitle">
+                Connect with all your existing real estate tools and platforms
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏠</div>
+                    <h3 class="feature-title">Lead Sources</h3>
+                    <p class="feature-description">
+                        Zillow, Realtor.com, Homes.com, BoldLeads, Market Leader, and custom websites
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">CRM Platforms</h3>
+                    <p class="feature-description">
+                        Top Producer, Chime, KvCore, LionDesk, Follow Up Boss, Wise Agent, and more
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📅</div>
+                    <h3 class="feature-title">Calendar Tools</h3>
+                    <p class="feature-description">
+                        Google Calendar, Outlook, Calendly, Acuity, and any CalDAV-compatible system
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">💳</div>
+                    <h3 class="feature-title">Mortgage Lenders</h3>
+                    <p class="feature-description">
+                        Direct integration with major lenders for pre-approval verification and referrals
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Communication</h3>
+                    <p class="feature-description">
+                        SMS, email marketing platforms, and automated drip campaign systems
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📋</div>
+                    <h3 class="feature-title">Transaction Management</h3>
+                    <p class="feature-description">
+                        DocuSign, Dotloop, SkySlope, and other transaction coordination platforms
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏘️</div>
+                    <h3 class="feature-title">IDX/MLS Systems</h3>
+                    <p class="feature-description">
+                        Direct MLS data feeds, IDX websites, and property search platforms
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">Marketing Platforms</h3>
+                    <p class="feature-description">
+                        Facebook Lead Ads, Google Ads, Zillow Premier Agent, and social media tools
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing for Real Estate -->
+    <section class="section" style="background: rgba(16, 185, 129, 0.1);">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">Real Estate Pricing</span>
+            </h2>
+            <p class="section-subtitle">
+                Transparent pricing designed for real estate professionals of all sizes
+            </p>
+            
+            <div class="use-cases-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">🏠</div>
+                    <h3 class="use-case-title">Individual Agent</h3>
+                    <p class="use-case-description">
+                        Perfect for solo agents looking to scale their lead follow-up and qualification process.
+                    </p>
+                    <div class="use-case-roi" style="margin-bottom: 25px;">
+                        <div class="roi-title">Starting at</div>
+                        <div class="roi-value">$0.20</div>
+                        <div class="roi-description">per successful call</div>
+                    </div>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> 100 free calls to start</li>
+                        <li><span style="color: #10b981;">✅</span> Lead qualification & nurturing</li>
+                        <li><span style="color: #10b981;">✅</span> Calendar integration</li>
+                        <li><span style="color: #10b981;">✅</span> CRM sync</li>
+                        <li><span style="color: #10b981;">✅</span> Real estate scripts</li>
+                    </ul>
+                </div>
+                
+                <div class="use-case-card fade-in">
+                    <div class="use-case-icon">🏢</div>
+                    <h3 class="use-case-title">Team/Brokerage</h3>
+                    <p class="use-case-description">
+                        Comprehensive solution for teams and brokerages with multiple agents and high lead volume.
+                    </p>
+                    <div class="use-case-roi" style="margin-bottom: 25px;">
+                        <div class="roi-title">Volume Pricing</div>
+                        <div class="roi-value">Custom</div>
+                        <div class="roi-description">Based on call volume</div>
+                    </div>
+                    <ul class="use-case-features">
+                        <li><span style="color: #10b981;">✅</span> Everything in Individual</li>
+                        <li><span style="color: #10b981;">✅</span> Multi-agent management</li>
+                        <li><span style="color: #10b981;">✅</span> Advanced analytics</li>
+                        <li><span style="color: #10b981;">✅</span> White-label options</li>
+                        <li><span style="color: #10b981;">✅</span> Dedicated support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">
+                <span class="gradient-text">Ready to Transform Your Real Estate Business?</span>
+            </h2>
+            <p class="cta-subtitle">
+                Join thousands of real estate professionals already using Vocelio.ai to 10X their sales
+            </p>
+            
+            <div class="cta-buttons">
+                <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">
+                    🏠 Start Free Trial - 100 Calls Free
+                </button>
+                <button onclick="callDemo()" class="btn btn-secondary">
+                    📞 Call Live Demo: +1-307-VOCELIO
+                </button>
+            </div>
+            
+            <div style="margin-top: 30px; color: #94a3b8;">
+                <p>✅ No Credit Card Required • ✅ Real Estate Optimized • ✅ 5 Minute Setup</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+
+    <script>
+        // Demo call function
+        function callDemo() {
+            if (navigator.userAgent.match(/Mobi/)) {
+                // Mobile device - attempt to make actual call
+                window.open('tel:+13072249663', '_self');
+            } else {
+                // Desktop - show instructions
+                alert('📞 Call +1-307-VOCELIO to speak with our AI agent "Sarah"!\n\n🏠 Ask about real estate features\n✨ Available 24/7 in 13+ languages\n🤖 Powered by GPT-4 and ElevenLabs\n🔥 You won\'t believe it\'s AI!\n\n💡 Tip: Call from your mobile for the best experience!');
+            }
+        }
+        
+        // Smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add scroll animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.fade-in, .use-case-card, .feature-card, .story-card, .conversation-card').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(element);
+            });
+            
+            // Load footer dynamically
+            fetch("components/footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    const footer = document.getElementById("footer");
+                    if (footer) footer.innerHTML = data;
+                })
+                .catch(error => console.error("Footer failed to load:", error));
+        });
+    </script>
+
+</body>
+</html>
