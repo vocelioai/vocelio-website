@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocelio.ai Privacy Policy - Your Data Protection & Security</title>
+    <meta name="description" content="Vocelio.ai privacy policy - Learn how we protect your data with SOC 2 certification, GDPR compliance, and enterprise-grade security. Transparent data practices for AI call center platform.">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vocelio.ai/privacy-policy.html">
+    <meta property="og:title" content="Vocelio.ai Privacy Policy - Your Data Protection & Security">
+    <meta property="og:description" content="Vocelio.ai privacy policy - Learn how we protect your data with SOC 2 certification, GDPR compliance, and enterprise-grade security. Transparent data practices for AI call center platform.">
+    <meta property="og:image" content="/android-chrome-512x512.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vocelio.ai Privacy Policy - Your Data Protection & Security">
+    <meta name="twitter:description" content="Vocelio.ai privacy policy - Learn how we protect your data with SOC 2 certification, GDPR compliance, and enterprise-grade security. Transparent data practices for AI call center platform.">
+    <meta name="twitter:image" content="/android-chrome-512x512.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Vocelio.ai Privacy Policy",
+      "url": "https://vocelio.ai/privacy-policy.html",
+      "description": "Vocelio.ai privacy policy - Learn how we protect your data with SOC 2 certification, GDPR compliance, and enterprise-grade security.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Vocelio.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://vocelio.ai/android-chrome-512x512.png"
+        }
+      }
+    }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 28px;
+            animation: pulse 2s infinite;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: -5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        /* Security Badges */
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+        
+        .security-badge {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .badge-icon {
+            font-size: 24px;
+            color: #10b981;
+        }
+        
+        .badge-text {
+            font-weight: bold;
+            color: #e2e8f0;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .privacy-section {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e2e8f0;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+        
+        .privacy-content {
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .privacy-content h3 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #e2e8f0;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .privacy-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #3b82f6;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        
+        .privacy-content p {
+            margin-bottom: 15px;
+        }
+        
+        .privacy-content ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 8px;
+            color: #94a3b8;
+        }
+        
+        .privacy-content strong {
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+        
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box h4 {
+            color: #3b82f6;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box {
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h4 {
+            color: #f97316;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .success-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .success-box h4 {
+            color: #10b981;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        /* Table of Contents */
+        .toc-section {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .toc-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e2e8f0;
+        }
+        
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .toc-list li {
+            margin-bottom: 10px;
+        }
+        
+        .toc-list a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .toc-list a:hover {
+            color: #06b6d4;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2));
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .contact-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .contact-subtitle {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .contact-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .contact-card h4 {
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+        
+        .contact-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .security-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .privacy-section {
+                padding: 25px;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">🔥</div>
+                    <div>
+                        <div class="logo-text">Vocelio.ai</div>
+                        <div class="logo-subtitle">World's Best AI Call Center</div>
+                    </div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="demo.html">Live Demo</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-secondary">Sign In</button>
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>→</span>
+                <span>Privacy Policy</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">PRIVACY POLICY</span><br>
+                Your Data, Your Rights
+            </h1>
+            
+            <p class="hero-subtitle">
+                Transparent, comprehensive, and compliant. Learn how we protect your data with 
+                enterprise-grade security and respect your privacy rights.
+            </p>
+            
+            <!-- Security Badges -->
+            <div class="security-badges">
+                <div class="security-badge">
+                    <div class="badge-icon">🛡️</div>
+                    <div class="badge-text">SOC 2 Type II Certified</div>
+                </div>
+                <div class="security-badge">
+                    <div class="badge-icon">🌍</div>
+                    <div class="badge-text">GDPR Compliant</div>
+                </div>
+                <div class="security-badge">
+                    <div class="badge-icon">📞</div>
+                    <div class="badge-text">TCPA Compliant</div>
+                </div>
+                <div class="security-badge">
+                    <div class="badge-icon">🔒</div>
+                    <div class="badge-text">256-bit Encryption</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <!-- Table of Contents -->
+        <div class="toc-section fade-in">
+            <h2 class="toc-title">📋 Table of Contents</h2>
+            <ul class="toc-list">
+                <li><a href="#overview">1. Overview & Contact Information</a></li>
+                <li><a href="#information-collection">2. Information We Collect</a></li>
+                <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+                <li><a href="#information-sharing">4. Information Sharing & Disclosure</a></li>
+                <li><a href="#data-security">5. Data Security & Protection</a></li>
+                <li><a href="#your-rights">6. Your Privacy Rights</a></li>
+                <li><a href="#international-transfers">7. International Data Transfers</a></li>
+                <li><a href="#ai-specific">8. AI & Voice Data Processing</a></li>
+                <li><a href="#retention">9. Data Retention</a></li>
+                <li><a href="#cookies">10. Cookies & Tracking</a></li>
+                <li><a href="#children">11. Children's Privacy</a></li>
+                <li><a href="#updates">12. Policy Updates</a></li>
+            </ul>
+        </div>
+
+        <!-- Section 1: Overview -->
+        <div id="overview" class="privacy-section fade-in">
+            <h2 class="section-title">1. Overview & Contact Information</h2>
+            <div class="privacy-content">
+                <p><strong>Effective Date:</strong> January 1, 2025</p>
+                <p><strong>Last Updated:</strong> January 1, 2025</p>
+                
+                <p>Welcome to Vocelio.ai. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, process, and protect your information when you use our AI call center platform and related services.</p>
+                
+                <div class="success-box">
+                    <h4>🎯 Our Commitment</h4>
+                    <p>We believe in complete transparency about how your data is handled. This policy is written in plain language to ensure you understand exactly what happens with your information.</p>
+                </div>
+                
+                <h3>Contact Information</h3>
+                <p><strong>Data Controller:</strong> Vocelio.ai, Inc.</p>
+                <p><strong>Address:</strong> 5830 E 2nd ST, STE 7000, Casper, WY 82609, United States</p>
+                <p><strong>Email:</strong> privacy@vocelio.ai</p>
+                <p><strong>Phone:</strong> +1-307-VOCELIO (224-9663)</p>
+                <p><strong>Data Protection Officer:</strong> dpo@vocelio.ai</p>
+            </div>
+        </div>
+
+        <!-- Section 2: Information Collection -->
+        <div id="information-collection" class="privacy-section fade-in">
+            <h2 class="section-title">2. Information We Collect</h2>
+            <div class="privacy-content">
+                <p>We collect information in several ways to provide and improve our AI call center services:</p>
+                
+                <h3>2.1 Information You Provide Directly</h3>
+                <h4>Account Registration</h4>
+                <ul>
+                    <li>Name, email address, phone number</li>
+                    <li>Company name and business information</li>
+                    <li>Billing and payment information</li>
+                    <li>Password and authentication credentials</li>
+                </ul>
+                
+                <h4>Service Configuration</h4>
+                <ul>
+                    <li>AI agent scripts and conversation flows</li>
+                    <li>Contact lists and customer data</li>
+                    <li>Voice preferences and customizations</li>
+                    <li>Integration settings and API configurations</li>
+                </ul>
+                
+                <h3>2.2 Automatically Collected Information</h3>
+                <h4>Call Data</h4>
+                <ul>
+                    <li>Phone numbers (caller and recipient)</li>
+                    <li>Call duration, time, and date</li>
+                    <li>Call recordings and transcripts</li>
+                    <li>Call outcomes and result classifications</li>
+                </ul>
+                
+                <h4>Technical Information</h4>
+                <ul>
+                    <li>IP addresses and device identifiers</li>
+                    <li>Browser type and operating system</li>
+                    <li>Usage patterns and feature interactions</li>
+                    <li>Performance metrics and error logs</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4>🔊 Voice Data Processing</h4>
+                    <p>Our AI platform processes voice data to provide human-like conversation capabilities. All voice processing occurs in real-time with enterprise-grade security measures.</p>
+                </div>
+                
+                <h3>2.3 Information from Third Parties</h3>
+                <ul>
+                    <li>CRM system data (with your authorization)</li>
+                    <li>Marketing platform integrations</li>
+                    <li>Payment processor information</li>
+                    <li>Business verification services</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3: How We Use Information -->
+        <div id="how-we-use" class="privacy-section fade-in">
+            <h2 class="section-title">3. How We Use Your Information</h2>
+            <div class="privacy-content">
+                <p>We use your information to provide, maintain, and improve our AI call center services:</p>
+                
+                <h3>3.1 Service Delivery</h3>
+                <ul>
+                    <li><strong>AI Call Execution:</strong> Processing calls through our AI agents</li>
+                    <li><strong>Voice Synthesis:</strong> Creating human-like voice interactions</li>
+                    <li><strong>Real-time Analytics:</strong> Providing performance metrics and insights</li>
+                    <li><strong>Integration Management:</strong> Connecting with your CRM and business tools</li>
+                </ul>
+                
+                <h3>3.2 Platform Operations</h3>
+                <ul>
+                    <li><strong>Account Management:</strong> Managing your account and subscription</li>
+                    <li><strong>Technical Support:</strong> Providing customer service and troubleshooting</li>
+                    <li><strong>System Security:</strong> Detecting and preventing fraud or abuse</li>
+                    <li><strong>Compliance Monitoring:</strong> Ensuring TCPA, GDPR, and regulatory compliance</li>
+                </ul>
+                
+                <h3>3.3 Service Improvement</h3>
+                <ul>
+                    <li><strong>AI Training:</strong> Improving our AI models and conversation quality</li>
+                    <li><strong>Feature Development:</strong> Building new capabilities and enhancements</li>
+                    <li><strong>Performance Optimization:</strong> Enhancing call success rates and user experience</li>
+                    <li><strong>Quality Assurance:</strong> Monitoring and improving service quality</li>
+                </ul>
+                
+                <div class="warning-box">
+                    <h4>⚠️ Important: AI Training</h4>
+                    <p>We may use aggregated, anonymized call data to improve our AI models. Personal information is always removed, and you can opt out of this process at any time.</p>
+                </div>
+                
+                <h3>3.4 Legal Basis for Processing (GDPR)</h3>
+                <ul>
+                    <li><strong>Contract Performance:</strong> Providing the services you've requested</li>
+                    <li><strong>Legitimate Interest:</strong> Improving our services and security</li>
+                    <li><strong>Legal Compliance:</strong> Meeting regulatory requirements</li>
+                    <li><strong>Consent:</strong> Where explicitly provided for specific purposes</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 4: Information Sharing -->
+        <div id="information-sharing" class="privacy-section fade-in">
+            <h2 class="section-title">4. Information Sharing & Disclosure</h2>
+            <div class="privacy-content">
+                <p>We limit information sharing to what's necessary for service delivery and legal compliance:</p>
+                
+                <h3>4.1 Service Providers</h3>
+                <h4>Essential Service Partners</h4>
+                <ul>
+                    <li><strong>Twilio:</strong> Telecommunications infrastructure and phone services</li>
+                    <li><strong>ElevenLabs:</strong> Voice synthesis and AI voice generation</li>
+                    <li><strong>OpenAI:</strong> GPT-4 AI conversation processing</li>
+                    <li><strong>Cloud Providers:</strong> AWS/GCP for hosting and data processing</li>
+                </ul>
+                
+                <h4>Business Operations</h4>
+                <ul>
+                    <li><strong>Payment Processors:</strong> Stripe, PayPal for billing and payments</li>
+                    <li><strong>Analytics Providers:</strong> Service usage and performance monitoring</li>
+                    <li><strong>Security Services:</strong> Fraud detection and prevention</li>
+                    <li><strong>Support Tools:</strong> Customer service and help desk platforms</li>
+                </ul>
+                
+                <div class="success-box">
+                    <h4>🤝 Partner Security</h4>
+                    <p>All our service providers are bound by strict data processing agreements and must meet our security standards. They can only use your data to provide services to us.</p>
+                </div>
+                
+                <h3>4.2 Legal Disclosures</h3>
+                <p>We may disclose information when required by law or to protect our rights:</p>
+                <ul>
+                    <li>Legal proceedings and court orders</li>
+                    <li>Government requests and regulatory compliance</li>
+                    <li>Protecting against fraud, abuse, or security threats</li>
+                    <li>Enforcing our Terms of Service</li>
+                </ul>
+                
+                <h3>4.3 Business Transfers</h3>
+                <p>In the event of a merger, acquisition, or sale of assets, your information may be transferred to the new entity, subject to this Privacy Policy.</p>
+                
+                <h3>4.4 With Your Consent</h3>
+                <p>We may share information for other purposes with your explicit consent, such as:</p>
+                <ul>
+                    <li>Integration with third-party applications</li>
+                    <li>Marketing partnerships (opt-in only)</li>
+                    <li>Research participation (anonymized data)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 5: Data Security -->
+        <div id="data-security" class="privacy-section fade-in">
+            <h2 class="section-title">5. Data Security & Protection</h2>
+            <div class="privacy-content">
+                <p>We implement comprehensive security measures to protect your information:</p>
+                
+                <h3>5.1 Technical Safeguards</h3>
+                <h4>Encryption</h4>
+                <ul>
+                    <li><strong>Data in Transit:</strong> TLS 1.3 encryption for all communications</li>
+                    <li><strong>Data at Rest:</strong> AES-256 encryption for stored data</li>
+                    <li><strong>Database Encryption:</strong> End-to-end encryption for all databases</li>
+                    <li><strong>Backup Encryption:</strong> Encrypted backups with secure key management</li>
+                </ul>
+                
+                <h4>Access Controls</h4>
+                <ul>
+                    <li><strong>Multi-Factor Authentication:</strong> Required for all admin accounts</li>
+                    <li><strong>Role-Based Access:</strong> Minimum necessary access principles</li>
+                    <li><strong>Zero Trust Architecture:</strong> Continuous verification of access requests</li>
+                    <li><strong>Regular Access Reviews:</strong> Quarterly access audits and updates</li>
+                </ul>
+                
+                <h4>Infrastructure Security</h4>
+                <ul>
+                    <li><strong>Secure Cloud Hosting:</strong> SOC 2 compliant data centers</li>
+                    <li><strong>Network Segmentation:</strong> Isolated environments for different data types</li>
+                    <li><strong>Intrusion Detection:</strong> 24/7 monitoring and threat detection</li>
+                    <li><strong>Regular Penetration Testing:</strong> Quarterly security assessments</li>
+                </ul>
+                
+                <h3>5.2 Operational Security</h3>
+                <h4>Employee Security</h4>
+                <ul>
+                    <li><strong>Background Checks:</strong> Security screening for all employees</li>
+                    <li><strong>Security Training:</strong> Regular privacy and security education</li>
+                    <li><strong>Confidentiality Agreements:</strong> Binding NDAs for all staff</li>
+                    <li><strong>Access Monitoring:</strong> Logging and monitoring of all data access</li>
+                </ul>
+                
+                <h4>Incident Response</h4>
+                <ul>
+                    <li><strong>24/7 Monitoring:</strong> Continuous security monitoring</li>
+                    <li><strong>Incident Response Plan:</strong> Documented procedures for security events</li>
+                    <li><strong>Breach Notification:</strong> 72-hour notification for data breaches</li>
+                    <li><strong>Forensic Capabilities:</strong> Advanced threat investigation tools</li>
+                </ul>
+                
+                <h3>5.3 Compliance Certifications</h3>
+                <div class="success-box">
+                    <h4>🏆 Our Certifications</h4>
+                    <ul>
+                        <li><strong>SOC 2 Type II:</strong> Annual third-party security audits</li>
+                        <li><strong>GDPR Compliance:</strong> Full European data protection compliance</li>
+                        <li><strong>TCPA Compliance:</strong> US telecommunications regulations</li>
+                        <li><strong>HIPAA Ready:</strong> Healthcare data protection capabilities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6: Your Rights -->
+        <div id="your-rights" class="privacy-section fade-in">
+            <h2 class="section-title">6. Your Privacy Rights</h2>
+            <div class="privacy-content">
+                <p>You have comprehensive rights regarding your personal information:</p>
+                
+                <h3>6.1 Universal Rights</h3>
+                <h4>Access Rights</h4>
+                <ul>
+                    <li><strong>Data Access:</strong> Request copies of your personal information</li>
+                    <li><strong>Processing Information:</strong> Understand how we use your data</li>
+                    <li><strong>Data Sources:</strong> Learn where we obtained your information</li>
+                    <li><strong>Sharing Details:</strong> See who we've shared your data with</li>
+                </ul>
+                
+                <h4>Control Rights</h4>
+                <ul>
+                    <li><strong>Correction:</strong> Update or correct inaccurate information</li>
+                    <li><strong>Deletion:</strong> Request removal of your personal data</li>
+                    <li><strong>Restriction:</strong> Limit how we process your information</li>
+                    <li><strong>Objection:</strong> Object to certain types of processing</li>
+                </ul>
+                
+                <h3>6.2 GDPR Rights (EU Residents)</h3>
+                <div class="highlight-box">
+                    <h4>🇪🇺 Enhanced EU Rights</h4>
+                    <ul>
+                        <li><strong>Data Portability:</strong> Receive your data in a portable format</li>
+                        <li><strong>Automated Decision Making:</strong> Opt out of automated profiling</li>
+                        <li><strong>Consent Withdrawal:</strong> Withdraw consent at any time</li>
+                        <li><strong>Supervisory Authority:</strong> Lodge complaints with data protection authorities</li>
+                    </ul>
+                </div>
+                
+                <h3>6.3 CCPA Rights (California Residents)</h3>
+                <div class="highlight-box">
+                    <h4>🌴 California Privacy Rights</h4>
+                    <ul>
+                        <li><strong>Right to Know:</strong> Detailed information about data collection and use</li>
+                        <li><strong>Right to Delete:</strong> Request deletion of personal information</li>
+                        <li><strong>Right to Opt-Out:</strong> Opt out of data sales (we don't sell data)</li>
+                        <li><strong>Non-Discrimination:</strong> Equal service regardless of privacy choices</li>
+                    </ul>
+                </div>
+                
+                <h3>6.4 How to Exercise Your Rights</h3>
+                <h4>Contact Methods</h4>
+                <ul>
+                    <li><strong>Privacy Portal:</strong> Self-service requests at app.vocelio.ai/privacy</li>
+                    <li><strong>Email:</strong> privacy@vocelio.ai with detailed request</li>
+                    <li><strong>Phone:</strong> +1-307-VOCELIO (224-9663) for immediate assistance</li>
+                    <li><strong>Mail:</strong> Privacy Team, 5830 E 2nd ST, STE 7000, Casper, WY 82609</li>
+                </ul>
+                
+                <h4>Response Timeline</h4>
+                <ul>
+                    <li><strong>Acknowledgment:</strong> Within 24 hours</li>
+                    <li><strong>Response:</strong> Within 30 days (GDPR) or 45 days (CCPA)</li>
+                    <li><strong>Complex Requests:</strong> May require additional 30-60 days</li>
+                    <li><strong>Identity Verification:</strong> Required for security purposes</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 7: International Transfers -->
+        <div id="international-transfers" class="privacy-section fade-in">
+            <h2 class="section-title">7. International Data Transfers</h2>
+            <div class="privacy-content">
+                <p>We operate globally and may transfer data across borders with appropriate safeguards:</p>
+                
+                <h3>7.1 Transfer Locations</h3>
+                <h4>Primary Data Centers</h4>
+                <ul>
+                    <li><strong>United States:</strong> Primary hosting and processing</li>
+                    <li><strong>European Union:</strong> EU customer data processing</li>
+                    <li><strong>Asia-Pacific:</strong> Regional processing for reduced latency</li>
+                </ul>
+                
+                <h4>Service Provider Locations</h4>
+                <ul>
+                    <li><strong>Twilio:</strong> Global telecommunications infrastructure</li>
+                    <li><strong>ElevenLabs:</strong> Voice processing (EU/US)</li>
+                    <li><strong>OpenAI:</strong> AI processing (US)</li>
+                    <li><strong>Cloud Providers:</strong> AWS/GCP global infrastructure</li>
+                </ul>
+                
+                <h3>7.2 Transfer Safeguards</h3>
+                <div class="success-box">
+                    <h4>🛡️ Protection Mechanisms</h4>
+                    <ul>
+                        <li><strong>Standard Contractual Clauses:</strong> EU-approved transfer mechanisms</li>
+                        <li><strong>Adequacy Decisions:</strong> Transfers to countries with adequate protection</li>
+                        <li><strong>Data Processing Agreements:</strong> Binding contracts with all processors</li>
+                        <li><strong>Additional Safeguards:</strong> Technical and organizational measures</li>
+                    </ul>
+                </div>
+                
+                <h3>7.3 Data Residency Options</h3>
+                <p>For enterprise customers, we offer data residency controls:</p>
+                <ul>
+                    <li><strong>EU Data Residency:</strong> Keep EU customer data within EU borders</li>
+                    <li><strong>US Data Residency:</strong> Restrict processing to US locations</li>
+                    <li><strong>Regional Processing:</strong> Process data in specific geographic regions</li>
+                    <li><strong>Custom Arrangements:</strong> Tailored data location requirements</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 8: AI-Specific Processing -->
+        <div id="ai-specific" class="privacy-section fade-in">
+            <h2 class="section-title">8. AI & Voice Data Processing</h2>
+            <div class="privacy-content">
+                <p>Our AI platform involves specialized data processing that requires additional transparency:</p>
+                
+                <h3>8.1 Voice Data Processing</h3>
+                <h4>Real-Time Processing</h4>
+                <ul>
+                    <li><strong>Speech Recognition:</strong> Converting speech to text for AI processing</li>
+                    <li><strong>Natural Language Understanding:</strong> Analyzing conversation context and intent</li>
+                    <li><strong>Response Generation:</strong> Creating appropriate responses using GPT-4</li>
+                    <li><strong>Voice Synthesis:</strong> Converting text responses to human-like speech</li>
+                </ul>
+                
+                <h4>Data Handling</h4>
+                <ul>
+                    <li><strong>Processing Location:</strong> Secure cloud infrastructure</li>
+                    <li><strong>Retention Period:</strong> Call recordings stored for 90 days by default</li>
+                    <li><strong>Access Controls:</strong> Strict access controls for voice data</li>
+                    <li><strong>Encryption:</strong> End-to-end encryption for all voice data</li>
+                </ul>
+                
+                <h3>8.2 AI Model Training</h3>
+                <div class="warning-box">
+                    <h4>⚠️ AI Training Transparency</h4>
+                    <p>We may use aggregated, anonymized conversation data to improve our AI models. This helps enhance conversation quality and accuracy for all users.</p>
+                </div>
+                
+                <h4>Training Data Processing</h4>
+                <ul>
+                    <li><strong>Anonymization:</strong> All personal identifiers removed</li>
+                    <li><strong>Aggregation:</strong> Individual conversations combined into patterns</li>
+                    <li><strong>Opt-Out Available:</strong> You can exclude your data from training</li>
+                    <li><strong>No Reproduction:</strong> Original conversations are never reproduced</li>
+                </ul>
+                
+                <h3>8.3 Automated Decision Making</h3>
+                <h4>AI-Driven Decisions</h4>
+                <ul>
+                    <li><strong>Call Routing:</strong> Determining optimal call timing and approach</li>
+                    <li><strong>Response Selection:</strong> Choosing appropriate conversation responses</li>
+                    <li><strong>Outcome Classification:</strong> Categorizing call results and success</li>
+                    <li><strong>Performance Optimization:</strong> Adjusting strategies for better results</li>
+                </ul>
+                
+                <h4>Human Oversight</h4>
+                <ul>
+                    <li><strong>Manual Review:</strong> Human review of automated decisions</li>
+                    <li><strong>Appeal Process:</strong> Contest automated decisions affecting you</li>
+                    <li><strong>Transparency:</strong> Explanation of decision-making logic</li>
+                    <li><strong>Control Options:</strong> Opt out of certain automated processing</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 9: Data Retention -->
+        <div id="retention" class="privacy-section fade-in">
+            <h2 class="section-title">9. Data Retention</h2>
+            <div class="privacy-content">
+                <p>We retain data only as long as necessary for business purposes and legal requirements:</p>
+                
+                <h3>9.1 Retention Periods</h3>
+                <h4>Account Data</h4>
+                <ul>
+                    <li><strong>Active Accounts:</strong> Retained while account is active</li>
+                    <li><strong>Closed Accounts:</strong> Deleted within 30 days of closure</li>
+                    <li><strong>Billing Records:</strong> 7 years for tax and legal compliance</li>
+                    <li><strong>Support Records:</strong> 3 years for service quality</li>
+                </ul>
+                
+                <h4>Call Data</h4>
+                <ul>
+                    <li><strong>Call Recordings:</strong> 90 days (configurable per customer)</li>
+                    <li><strong>Call Transcripts:</strong> 1 year for analytics and improvement</li>
+                    <li><strong>Call Metadata:</strong> 2 years for performance optimization</li>
+                    <li><strong>AI Training Data:</strong> Indefinitely (anonymized only)</li>
+                </ul>
+                
+                <h4>Technical Data</h4>
+                <ul>
+                    <li><strong>Log Files:</strong> 90 days for security and troubleshooting</li>
+                    <li><strong>Analytics Data:</strong> 2 years for service improvement</li>
+                    <li><strong>Security Logs:</strong> 7 years for compliance and investigation</li>
+                    <li><strong>Backup Data:</strong> 30 days for disaster recovery</li>
+                </ul>
+                
+                <h3>9.2 Secure Deletion</h3>
+                <div class="success-box">
+                    <h4>🗑️ Data Destruction Process</h4>
+                    <ul>
+                        <li><strong>Cryptographic Erasure:</strong> Secure key deletion for encrypted data</li>
+                        <li><strong>Multi-Pass Overwriting:</strong> Secure deletion of unencrypted data</li>
+                        <li><strong>Physical Destruction:</strong> Hardware destruction when decommissioned</li>
+                        <li><strong>Verification:</strong> Confirmation of complete data destruction</li>
+                    </ul>
+                </div>
+                
+                <h3>9.3 Legal Hold</h3>
+                <p>Data may be retained longer when required by:</p>
+                <ul>
+                    <li>Legal proceedings and litigation</li>
+                    <li>Regulatory investigations</li>
+                    <li>Court orders and subpoenas</li>
+                    <li>Legitimate business disputes</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 10: Cookies -->
+        <div id="cookies" class="privacy-section fade-in">
+            <h2 class="section-title">10. Cookies & Tracking Technologies</h2>
+            <div class="privacy-content">
+                <p>We use cookies and similar technologies to improve your experience:</p>
+                
+                <h3>10.1 Types of Cookies</h3>
+                <h4>Essential Cookies</h4>
+                <ul>
+                    <li><strong>Authentication:</strong> Keeping you logged in</li>
+                    <li><strong>Security:</strong> Protecting against fraud and abuse</li>
+                    <li><strong>Functionality:</strong> Remembering your preferences</li>
+                    <li><strong>Load Balancing:</strong> Distributing traffic efficiently</li>
+                </ul>
+                
+                <h4>Analytics Cookies</h4>
+                <ul>
+                    <li><strong>Usage Analytics:</strong> Understanding how you use our platform</li>
+                    <li><strong>Performance Monitoring:</strong> Identifying and fixing issues</li>
+                    <li><strong>Feature Usage:</strong> Measuring feature adoption and success</li>
+                    <li><strong>Error Tracking:</strong> Identifying and resolving bugs</li>
+                </ul>
+                
+                <h4>Marketing Cookies (Optional)</h4>
+                <ul>
+                    <li><strong>Attribution:</strong> Measuring marketing campaign effectiveness</li>
+                    <li><strong>Personalization:</strong> Customizing content and offers</li>
+                    <li><strong>Retargeting:</strong> Showing relevant ads (with consent)</li>
+                    <li><strong>Social Media:</strong> Enabling social sharing features</li>
+                </ul>
+                
+                <h3>10.2 Cookie Management</h3>
+                <div class="highlight-box">
+                    <h4>🍪 Your Cookie Choices</h4>
+                    <ul>
+                        <li><strong>Cookie Preferences:</strong> Manage settings in your account</li>
+                        <li><strong>Browser Controls:</strong> Configure browser cookie settings</li>
+                        <li><strong>Opt-Out Tools:</strong> Use industry opt-out mechanisms</li>
+                        <li><strong>Do Not Track:</strong> We respect browser DNT signals</li>
+                    </ul>
+                </div>
+                
+                <h3>10.3 Third-Party Tracking</h3>
+                <h4>Analytics Providers</h4>
+                <ul>
+                    <li><strong>Google Analytics:</strong> Website usage analytics</li>
+                    <li><strong>Mixpanel:</strong> Product usage analytics</li>
+                    <li><strong>Hotjar:</strong> User experience analytics</li>
+                    <li><strong>Sentry:</strong> Error monitoring and tracking</li>
+                </ul>
+                
+                <h4>Marketing Platforms</h4>
+                <ul>
+                    <li><strong>Google Ads:</strong> Advertising campaign tracking</li>
+                    <li><strong>Facebook Pixel:</strong> Social media advertising</li>
+                    <li><strong>LinkedIn Insight:</strong> Professional network advertising</li>
+                    <li><strong>HubSpot:</strong> Marketing automation and tracking</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 11: Children's Privacy -->
+        <div id="children" class="privacy-section fade-in">
+            <h2 class="section-title">11. Children's Privacy</h2>
+            <div class="privacy-content">
+                <p>Our services are designed for business use and not intended for children:</p>
+                
+                <h3>11.1 Age Restrictions</h3>
+                <ul>
+                    <li><strong>Minimum Age:</strong> 18 years old for account creation</li>
+                    <li><strong>Business Use:</strong> Services intended for commercial purposes</li>
+                    <li><strong>Account Verification:</strong> Age verification during registration</li>
+                    <li><strong>Parental Consent:</strong> Required for users under 18</li>
+                </ul>
+                
+                <h3>11.2 COPPA Compliance</h3>
+                <div class="warning-box">
+                    <h4>👶 Child Protection</h4>
+                    <p>We do not knowingly collect personal information from children under 13. If we discover such information, we will delete it immediately and notify parents.</p>
+                </div>
+                
+                <h3>11.3 Reporting Concerns</h3>
+                <p>If you believe a child has provided information to us:</p>
+                <ul>
+                    <li><strong>Email:</strong> privacy@vocelio.ai with "Child Privacy" in subject</li>
+                    <li><strong>Phone:</strong> +1-307-VOCELIO (224-9663)</li>
+                    <li><strong>Response:</strong> Investigation and removal within 24 hours</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 12: Policy Updates -->
+        <div id="updates" class="privacy-section fade-in">
+            <h2 class="section-title">12. Policy Updates</h2>
+            <div class="privacy-content">
+                <p>We may update this Privacy Policy to reflect changes in our practices or legal requirements:</p>
+                
+                <h3>12.1 Notification Process</h3>
+                <h4>Major Changes</h4>
+                <ul>
+                    <li><strong>Email Notification:</strong> 30 days advance notice to all users</li>
+                    <li><strong>Platform Notice:</strong> Prominent notification in your dashboard</li>
+                    <li><strong>Website Banner:</strong> Homepage notification of policy changes</li>
+                    <li><strong>Opt-Out Period:</strong> 30 days to object or close account</li>
+                </ul>
+                
+                <h4>Minor Changes</h4>
+                <ul>
+                    <li><strong>Website Update:</strong> Updated policy posted immediately</li>
+                    <li><strong>Change Log:</strong> Detailed summary of modifications</li>
+                    <li><strong>Version History:</strong> Previous versions available for reference</li>
+                    <li><strong>Effective Date:</strong> Clear indication of when changes take effect</li>
+                </ul>
+                
+                <h3>12.2 Your Choices</h3>
+                <div class="highlight-box">
+                    <h4>📝 Policy Change Options</h4>
+                    <ul>
+                        <li><strong>Accept Changes:</strong> Continue using our services</li>
+                        <li><strong>Request Clarification:</strong> Contact us with questions</li>
+                        <li><strong>Object to Changes:</strong> Exercise your privacy rights</li>
+                        <li><strong>Close Account:</strong> End your relationship with us</li>
+                    </ul>
+                </div>
+                
+                <h3>12.3 Version History</h3>
+                <ul>
+                    <li><strong>v1.0 (January 1, 2025):</strong> Initial privacy policy</li>
+                    <li><strong>Archive Access:</strong> Previous versions at vocelio.ai/privacy/archive</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section fade-in">
+            <h2 class="contact-title">
+                <span class="gradient-text">Questions About Your Privacy?</span>
+            </h2>
+            <p class="contact-subtitle">
+                Our privacy team is here to help with any questions or concerns about your data protection.
+            </p>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h4>📧 Email Support</h4>
+                    <p>privacy@vocelio.ai</p>
+                    <p>Response within 24 hours</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>📞 Phone Support</h4>
+                    <p>+1-307-VOCELIO (224-9663)</p>
+                    <p>Available 24/7</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>🏢 Mailing Address</h4>
+                    <p>Privacy Team<br>
+                    5830 E 2nd ST, STE 7000<br>
+                    Casper, WY 82609, USA</p>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>🛡️ Data Protection Officer</h4>
+                    <p>dpo@vocelio.ai</p>
+                    <p>For GDPR and compliance matters</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <button onclick="window.open('https://app.vocelio.ai/privacy', '_blank')" class="btn btn-primary">
+                    🔒 Manage Privacy Settings
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links and table of contents
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            links.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Add scroll animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.privacy-section, .toc-section, .contact-section').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(element);
+            });
+            
+            // Load footer dynamically
+            fetch("components/footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    const footer = document.getElementById("footer");
+                    if (footer) footer.innerHTML = data;
+                })
+                .catch(error => console.error("Footer failed to load:", error));
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <div id="footer"></div>
+
+</body>
+</html>
