@@ -1,4 +1,830 @@
-                <div class="quick-ref-grid">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocelio.ai SMS & Call Compliance Policy - TCPA, CAN-SPAM & Global Regulations</title>
+    <meta name="description" content="Complete SMS and call compliance policy for Vocelio.ai. TCPA compliance, CAN-SPAM requirements, international regulations, and best practices for AI call center operations.">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vocelio.ai/compliance.html">
+    <meta property="og:title" content="Vocelio.ai SMS & Call Compliance Policy - TCPA, CAN-SPAM & Global Regulations">
+    <meta property="og:description" content="Complete SMS and call compliance policy for Vocelio.ai. TCPA compliance, CAN-SPAM requirements, international regulations, and best practices for AI call center operations.">
+    <meta property="og:image" content="/android-chrome-512x512.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vocelio.ai SMS & Call Compliance Policy - TCPA, CAN-SPAM & Global Regulations">
+    <meta name="twitter:description" content="Complete SMS and call compliance policy for Vocelio.ai. TCPA compliance, CAN-SPAM requirements, international regulations, and best practices for AI call center operations.">
+    <meta name="twitter:image" content="/android-chrome-512x512.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Vocelio.ai SMS & Call Compliance Policy",
+      "url": "https://vocelio.ai/compliance.html",
+      "description": "Complete SMS and call compliance policy for Vocelio.ai. TCPA compliance, CAN-SPAM requirements, international regulations, and best practices.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Vocelio.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://vocelio.ai/android-chrome-512x512.png"
+        }
+      }
+    }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+        }
+        
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 28px;
+            animation: pulse 2s infinite;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: -5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
+            background-size: 300% 300%;
+            animation: gradient 8s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        /* Compliance Status */
+        .compliance-status {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        
+        .status-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .status-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .status-icon {
+            font-size: 40px;
+            color: #10b981;
+            margin-bottom: 15px;
+        }
+        
+        .status-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 8px;
+        }
+        
+        .status-description {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+        
+        .critical-notice {
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .critical-notice h3 {
+            color: #ef4444;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .critical-notice p {
+            color: #fca5a5;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .compliance-section {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e2e8f0;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+        
+        .compliance-content {
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        
+        .compliance-content h3 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #e2e8f0;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .compliance-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #3b82f6;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        
+        .compliance-content p {
+            margin-bottom: 15px;
+        }
+        
+        .compliance-content ul, .compliance-content ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        .compliance-content li {
+            margin-bottom: 8px;
+            color: #94a3b8;
+        }
+        
+        .compliance-content strong {
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+        
+        /* Special Boxes */
+        .warning-box {
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h4 {
+            color: #f97316;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .danger-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .danger-box h4 {
+            color: #ef4444;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .success-box {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .success-box h4 {
+            color: #10b981;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .info-box {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box h4 {
+            color: #3b82f6;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        /* Checklist Styles */
+        .compliance-checklist {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .checklist-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #10b981;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 10px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+        
+        .checklist-icon {
+            color: #10b981;
+            font-size: 18px;
+            margin-top: 2px;
+        }
+        
+        .checklist-text {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .checklist-text strong {
+            color: #e2e8f0;
+        }
+        
+        /* Table of Contents */
+        .toc-section {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .toc-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e2e8f0;
+        }
+        
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            columns: 2;
+            column-gap: 40px;
+        }
+        
+        .toc-list li {
+            margin-bottom: 10px;
+            break-inside: avoid;
+        }
+        
+        .toc-list a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 14px;
+        }
+        
+        .toc-list a:hover {
+            color: #06b6d4;
+        }
+        
+        /* Quick Reference Cards */
+        .quick-ref-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .quick-ref-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .quick-ref-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .quick-ref-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #3b82f6;
+            margin-bottom: 15px;
+        }
+        
+        .quick-ref-content {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+        
+        .quick-ref-content strong {
+            color: #e2e8f0;
+        }
+        
+        /* Penalty Table */
+        .penalty-table {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+        
+        .penalty-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .penalty-table th {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .penalty-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(239, 68, 68, 0.1);
+            color: #cbd5e1;
+        }
+        
+        .penalty-table tr:hover {
+            background: rgba(239, 68, 68, 0.05);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2));
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 60px 0;
+        }
+        
+        .contact-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .contact-subtitle {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .contact-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .contact-card h4 {
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+        
+        .contact-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        /* Animations */
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .compliance-status {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .compliance-section {
+                padding: 25px;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .toc-list {
+                columns: 1;
+            }
+            
+            .quick-ref-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .checklist-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .compliance-status {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <div class="logo-icon">🔥</div>
+                    <div>
+                        <div class="logo-text">Vocelio.ai</div>
+                        <div class="logo-subtitle">World's Best AI Call Center</div>
+                    </div>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="demo.html">Live Demo</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="nav-buttons">
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-secondary">Sign In</button>
+                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span>→</span>
+                <span>SMS & Call Compliance Policy</span>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">SMS & CALL COMPLIANCE</span><br>
+                Your Complete Guide to Legal Operations
+            </h1>
+            
+            <p class="hero-subtitle">
+                Comprehensive compliance policy covering TCPA, CAN-SPAM, international regulations, 
+                and best practices for AI-powered call center operations.
+            </p>
+            
+            <!-- Critical Notice -->
+            <div class="critical-notice">
+                <h3>🚨 CRITICAL COMPLIANCE NOTICE</h3>
+                <p>
+                    <strong>Failure to comply with telecommunications regulations can result in fines up to $1,500 per violation.</strong> 
+                    This policy is mandatory reading for all Vocelio.ai users. Compliance is YOUR responsibility.
+                </p>
+            </div>
+            
+            <!-- Compliance Status -->
+            <div class="compliance-status">
+                <div class="status-card">
+                    <div class="status-icon">📞</div>
+                    <div class="status-title">TCPA Compliant</div>
+                    <div class="status-description">US Telephone Consumer Protection Act</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-icon">📧</div>
+                    <div class="status-title">CAN-SPAM Compliant</div>
+                    <div class="status-description">US Anti-Spam Regulations</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-icon">🌍</div>
+                    <div class="status-title">Global Compliance</div>
+                    <div class="status-description">International Regulations</div>
+                </div>
+                <div class="status-card">
+                    <div class="status-icon">🛡️</div>
+                    <div class="status-title">GDPR Ready</div>
+                    <div class="status-description">European Data Protection</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <!-- Table of Contents -->
+        <div class="toc-section fade-in">
+            <h2 class="toc-title">📋 Compliance Guide Contents</h2>
+            <ul class="toc-list">
+                <li><a href="#overview">1. Compliance Overview</a></li>
+                <li><a href="#tcpa-requirements">2. TCPA Requirements</a></li>
+                <li><a href="#consent-management">3. Consent Management</a></li>
+                <li><a href="#opt-out-procedures">4. Opt-Out Procedures</a></li>
+                <li><a href="#time-restrictions">5. Time Restrictions</a></li>
+                <li><a href="#dnc-compliance">6. Do Not Call Lists</a></li>
+                <li><a href="#sms-compliance">7. SMS Compliance</a></li>
+                <li><a href="#international-laws">8. International Laws</a></li>
+                <li><a href="#ai-specific-rules">9. AI-Specific Rules</a></li>
+                <li><a href="#record-keeping">10. Record Keeping</a></li>
+                <li><a href="#penalties-enforcement">11. Penalties & Enforcement</a></li>
+                <li><a href="#best-practices">12. Best Practices</a></li>
+                <li><a href="#compliance-checklist">13. Compliance Checklist</a></li>
+                <li><a href="#monitoring-auditing">14. Monitoring & Auditing</a></li>
+                <li><a href="#violation-response">15. Violation Response</a></li>
+                <li><a href="#resources-support">16. Resources & Support</a></li>
+            </ul>
+        </div>
+
+        <!-- Section 1: Compliance Overview -->
+        <div id="overview" class="compliance-section fade-in">
+            <h2 class="section-title">1. Compliance Overview</h2>
+            <div class="compliance-content">
+                <p>This policy outlines the mandatory compliance requirements for all users of the Vocelio.ai platform. Compliance with telecommunications and messaging laws is not optional - it's a legal requirement that protects both your business and the consumers you contact.</p>
+                
+                <div class="danger-box">
+                    <h4>🚨 YOUR RESPONSIBILITY</h4>
+                    <p><strong>YOU are responsible for ensuring all your communications comply with applicable laws.</strong> Vocelio.ai provides tools and guidance, but ultimate compliance responsibility rests with you as the account holder and message sender.</p>
+                </div>
+                
+                <h3>1.1 Key Regulatory Frameworks</h3>
+                 <div class="quick-ref-grid">
                     <div class="quick-ref-card">
                         <div class="quick-ref-title">📞 TCPA (USA)</div>
                         <div class="quick-ref-content">
@@ -1005,7 +1831,7 @@
                 
                 <div class="contact-card">
                     <h4>📞 Support Hotline</h4>
-                    <p>+1-307-VOCELIO (224-9663)</p>
+                    <p>+1-307-224-9663</p>
                     <p>Available 24/7 for urgent compliance issues</p>
                 </div>
                 
@@ -1097,861 +1923,4 @@
     <div id="footer"></div>
 
 </body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocelio.ai SMS & Call Compliance Policy - TCPA, CAN-SPAM & Global Regulations</title>
-    <meta name="description" content="Complete SMS and call compliance policy for Vocelio.ai. TCPA compliance, CAN-SPAM requirements, international regulations, and best practices for AI call center operations.">
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vocelio.ai/compliance-policy.html">
-    <meta property="og:title" content="Vocelio.ai SMS & Call Compliance Policy - TCPA, CAN-SPAM & Global Regulations">
-    <meta property="og:description" content="Complete SMS and call compliance policy for Vocelio.ai. TCPA compliance, CAN-SPAM requirements, international regulations, and best practices for AI call center operations.">
-    <meta property="og:image" content="/android-chrome-512x512.png">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vocelio.ai SMS & Call Compliance Policy - TCPA, CAN-SPAM & Global Regulations">
-    <meta name="twitter:description" content="Complete SMS and call compliance policy for Vocelio.ai. TCPA compliance, CAN-SPAM requirements, international regulations, and best practices for AI call center operations.">
-    <meta name="twitter:image" content="/android-chrome-512x512.png">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Vocelio.ai SMS & Call Compliance Policy",
-      "url": "https://vocelio.ai/compliance-policy.html",
-      "description": "Complete SMS and call compliance policy for Vocelio.ai. TCPA compliance, CAN-SPAM requirements, international regulations, and best practices.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Vocelio.ai",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://vocelio.ai/android-chrome-512x512.png"
-        }
-      }
-    }
-    </script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-            color: white;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Navigation */
-        .nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(20px);
-            padding: 15px 0;
-        }
-        
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-        
-        .logo-icon {
-            font-size: 28px;
-            animation: pulse 2s infinite;
-        }
-        
-        .logo-text {
-            font-size: 24px;
-            font-weight: bold;
-            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
-            background-size: 300% 300%;
-            animation: gradient 8s ease infinite;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .logo-subtitle {
-            font-size: 12px;
-            color: #94a3b8;
-            margin-top: -5px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: white;
-        }
-        
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-        
-        .btn {
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            text-align: center;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(45deg, #10b981, #059669);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
-        }
-        
-        .btn-secondary {
-            background: linear-gradient(45deg, #3b82f6, #06b6d4);
-            color: white;
-        }
-        
-        .btn-secondary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 120px 0 80px;
-            text-align: center;
-            position: relative;
-        }
-        
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            overflow: hidden;
-            z-index: -1;
-        }
-        
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(239, 68, 68, 0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-        
-        .hero-title {
-            font-size: 4rem;
-            font-weight: 900;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6, #ec4899);
-            background-size: 300% 300%;
-            animation: gradient 8s ease infinite;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero-subtitle {
-            font-size: 24px;
-            color: #94a3b8;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .breadcrumb {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 40px;
-            font-size: 14px;
-            color: #94a3b8;
-        }
-        
-        .breadcrumb a {
-            color: #3b82f6;
-            text-decoration: none;
-        }
-        
-        /* Compliance Status */
-        .compliance-status {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-        
-        .status-card {
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .status-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .status-icon {
-            font-size: 40px;
-            color: #10b981;
-            margin-bottom: 15px;
-        }
-        
-        .status-title {
-            font-size: 16px;
-            font-weight: bold;
-            color: #10b981;
-            margin-bottom: 8px;
-        }
-        
-        .status-description {
-            font-size: 12px;
-            color: #94a3b8;
-        }
-        
-        .critical-notice {
-            background: rgba(239, 68, 68, 0.1);
-            border: 2px solid rgba(239, 68, 68, 0.3);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        
-        .critical-notice h3 {
-            color: #ef4444;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .critical-notice p {
-            color: #fca5a5;
-            font-size: 16px;
-            line-height: 1.7;
-        }
-        
-        /* Main Content */
-        .main-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .compliance-section {
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 20px;
-            padding: 40px;
-            margin-bottom: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #e2e8f0;
-        }
-        
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #94a3b8;
-            margin-bottom: 25px;
-        }
-        
-        .compliance-content {
-            color: #cbd5e1;
-            line-height: 1.7;
-            font-size: 16px;
-        }
-        
-        .compliance-content h3 {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #e2e8f0;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        
-        .compliance-content h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #3b82f6;
-            margin-top: 25px;
-            margin-bottom: 12px;
-        }
-        
-        .compliance-content p {
-            margin-bottom: 15px;
-        }
-        
-        .compliance-content ul, .compliance-content ol {
-            margin: 15px 0;
-            padding-left: 25px;
-        }
-        
-        .compliance-content li {
-            margin-bottom: 8px;
-            color: #94a3b8;
-        }
-        
-        .compliance-content strong {
-            color: #e2e8f0;
-            font-weight: 600;
-        }
-        
-        /* Special Boxes */
-        .warning-box {
-            background: rgba(249, 115, 22, 0.1);
-            border: 1px solid rgba(249, 115, 22, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .warning-box h4 {
-            color: #f97316;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        
-        .danger-box {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .danger-box h4 {
-            color: #ef4444;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        
-        .success-box {
-            background: rgba(16, 185, 129, 0.1);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .success-box h4 {
-            color: #10b981;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        
-        .info-box {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .info-box h4 {
-            color: #3b82f6;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-        
-        /* Checklist Styles */
-        .compliance-checklist {
-            background: rgba(30, 41, 59, 0.8);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 30px 0;
-        }
-        
-        .checklist-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #10b981;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        .checklist-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        
-        .checklist-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 15px;
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 10px;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-        
-        .checklist-icon {
-            color: #10b981;
-            font-size: 18px;
-            margin-top: 2px;
-        }
-        
-        .checklist-text {
-            color: #cbd5e1;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        
-        .checklist-text strong {
-            color: #e2e8f0;
-        }
-        
-        /* Table of Contents */
-        .toc-section {
-            background: rgba(30, 41, 59, 0.8);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .toc-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #e2e8f0;
-        }
-        
-        .toc-list {
-            list-style: none;
-            padding: 0;
-            columns: 2;
-            column-gap: 40px;
-        }
-        
-        .toc-list li {
-            margin-bottom: 10px;
-            break-inside: avoid;
-        }
-        
-        .toc-list a {
-            color: #3b82f6;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 14px;
-        }
-        
-        .toc-list a:hover {
-            color: #06b6d4;
-        }
-        
-        /* Quick Reference Cards */
-        .quick-ref-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-        
-        .quick-ref-card {
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 15px;
-            padding: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .quick-ref-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .quick-ref-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #3b82f6;
-            margin-bottom: 15px;
-        }
-        
-        .quick-ref-content {
-            font-size: 14px;
-            color: #94a3b8;
-            line-height: 1.6;
-        }
-        
-        .quick-ref-content strong {
-            color: #e2e8f0;
-        }
-        
-        /* Penalty Table */
-        .penalty-table {
-            background: rgba(239, 68, 68, 0.05);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            border-radius: 15px;
-            overflow: hidden;
-            margin: 30px 0;
-        }
-        
-        .penalty-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .penalty-table th {
-            background: rgba(239, 68, 68, 0.2);
-            color: #fca5a5;
-            padding: 15px;
-            text-align: left;
-            font-weight: bold;
-        }
-        
-        .penalty-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid rgba(239, 68, 68, 0.1);
-            color: #cbd5e1;
-        }
-        
-        .penalty-table tr:hover {
-            background: rgba(239, 68, 68, 0.05);
-        }
-        
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2));
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            margin: 60px 0;
-        }
-        
-        .contact-title {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .contact-subtitle {
-            color: #94a3b8;
-            margin-bottom: 30px;
-        }
-        
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .contact-card {
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .contact-card h4 {
-            color: #3b82f6;
-            margin-bottom: 10px;
-        }
-        
-        .contact-card p {
-            color: #94a3b8;
-            font-size: 14px;
-        }
-        
-        /* Animations */
-        @keyframes gradient {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 18px;
-            }
-            
-            .compliance-status {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-            
-            .compliance-section {
-                padding: 25px;
-            }
-            
-            .contact-info {
-                grid-template-columns: 1fr;
-            }
-            
-            .toc-list {
-                columns: 1;
-            }
-            
-            .quick-ref-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .checklist-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .compliance-status {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-content">
-                <a href="/" class="logo">
-                    <div class="logo-icon">🔥</div>
-                    <div>
-                        <div class="logo-text">Vocelio.ai</div>
-                        <div class="logo-subtitle">World's Best AI Call Center</div>
-                    </div>
-                </a>
-                
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="demo.html">Live Demo</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                
-                <div class="nav-buttons">
-                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-secondary">Sign In</button>
-                    <button onclick="window.open('https://app.vocelio.ai', '_blank')" class="btn btn-primary">Start Free Trial</button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="/">Home</a>
-                <span>→</span>
-                <span>SMS & Call Compliance Policy</span>
-            </div>
-            
-            <h1 class="hero-title">
-                <span class="gradient-text">SMS & CALL COMPLIANCE</span><br>
-                Your Complete Guide to Legal Operations
-            </h1>
-            
-            <p class="hero-subtitle">
-                Comprehensive compliance policy covering TCPA, CAN-SPAM, international regulations, 
-                and best practices for AI-powered call center operations.
-            </p>
-            
-            <!-- Critical Notice -->
-            <div class="critical-notice">
-                <h3>🚨 CRITICAL COMPLIANCE NOTICE</h3>
-                <p>
-                    <strong>Failure to comply with telecommunications regulations can result in fines up to $1,500 per violation.</strong> 
-                    This policy is mandatory reading for all Vocelio.ai users. Compliance is YOUR responsibility.
-                </p>
-            </div>
-            
-            <!-- Compliance Status -->
-            <div class="compliance-status">
-                <div class="status-card">
-                    <div class="status-icon">📞</div>
-                    <div class="status-title">TCPA Compliant</div>
-                    <div class="status-description">US Telephone Consumer Protection Act</div>
-                </div>
-                <div class="status-card">
-                    <div class="status-icon">📧</div>
-                    <div class="status-title">CAN-SPAM Compliant</div>
-                    <div class="status-description">US Anti-Spam Regulations</div>
-                </div>
-                <div class="status-card">
-                    <div class="status-icon">🌍</div>
-                    <div class="status-title">Global Compliance</div>
-                    <div class="status-description">International Regulations</div>
-                </div>
-                <div class="status-card">
-                    <div class="status-icon">🛡️</div>
-                    <div class="status-title">GDPR Ready</div>
-                    <div class="status-description">European Data Protection</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <section class="main-content">
-        <!-- Table of Contents -->
-        <div class="toc-section fade-in">
-            <h2 class="toc-title">📋 Compliance Guide Contents</h2>
-            <ul class="toc-list">
-                <li><a href="#overview">1. Compliance Overview</a></li>
-                <li><a href="#tcpa-requirements">2. TCPA Requirements</a></li>
-                <li><a href="#consent-management">3. Consent Management</a></li>
-                <li><a href="#opt-out-procedures">4. Opt-Out Procedures</a></li>
-                <li><a href="#time-restrictions">5. Time Restrictions</a></li>
-                <li><a href="#dnc-compliance">6. Do Not Call Lists</a></li>
-                <li><a href="#sms-compliance">7. SMS Compliance</a></li>
-                <li><a href="#international-laws">8. International Laws</a></li>
-                <li><a href="#ai-specific-rules">9. AI-Specific Rules</a></li>
-                <li><a href="#record-keeping">10. Record Keeping</a></li>
-                <li><a href="#penalties-enforcement">11. Penalties & Enforcement</a></li>
-                <li><a href="#best-practices">12. Best Practices</a></li>
-                <li><a href="#compliance-checklist">13. Compliance Checklist</a></li>
-                <li><a href="#monitoring-auditing">14. Monitoring & Auditing</a></li>
-                <li><a href="#violation-response">15. Violation Response</a></li>
-                <li><a href="#resources-support">16. Resources & Support</a></li>
-            </ul>
-        </div>
-
-        <!-- Section 1: Compliance Overview -->
-        <div id="overview" class="compliance-section fade-in">
-            <h2 class="section-title">1. Compliance Overview</h2>
-            <div class="compliance-content">
-                <p>This policy outlines the mandatory compliance requirements for all users of the Vocelio.ai platform. Compliance with telecommunications and messaging laws is not optional - it's a legal requirement that protects both your business and the consumers you contact.</p>
-                
-                <div class="danger-box">
-                    <h4>🚨 YOUR RESPONSIBILITY</h4>
-                    <p><strong>YOU are responsible for ensuring all your communications comply with applicable laws.</strong> Vocelio.ai provides tools and guidance, but ultimate compliance responsibility rests with you as the account holder and message sender.</p>
-                </div>
-                
-                <h3>1.1 Key Regulatory Frameworks</h3>
-                <div class="quick-ref-grid">
-                    <div class="quick-ref-card">
-                        <div class="quick-ref-title">📞 TCPA (USA)</div>
-                        <div class="quick-ref-content">
-                            <strong>Telephone Consumer Protection Act</strong><br>
-                            Regulates calls and texts to mobile phones, landlines, and fax machines. Requires explicit consent for marketing communications.
-                        </div>
-                    </div>
-                    
-                    <div class="quick-ref-card">
-                        <div class="quick-ref-title">📧 CAN-SPAM (USA)</div>
-                        <div class="quick-ref-content">
-                            <strong>Controlling the Assault of Non-Solicited Pornography And Marketing Act</strong><br>
-                            Sets rules for commercial email and messaging, including identification and opt-out requirements.
-                        </div>
-                    </div>
-                    
-                    <div class="quick-ref-card">
-                        <div class="quick-ref-title">🌍 GDPR (EU)</div>
-                        <div class="quick-ref-content">
-                            <strong>General Data Protection Regulation</strong><br>
-                            European privacy law requiring explicit consent for processing personal data, including phone numbers and contact information.
-                        </div>
-                    </div>
-                    
-                    <div class="quick-ref-card">
-                        <div class="quick-ref-title">🇨🇦 CASL (Canada)</div>
-                        <div class="quick-ref-content">
-                            <strong>Canadian Anti-Spam Legislation</strong><br>
-                            Requires express consent for commercial electronic messages and provides strict penalties for violations.
-                        </div>
-                    </div>
-                </div>
+</html>
